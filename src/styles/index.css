@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* SCROLL WITH NO SCROLL BAR */
+  .no-scrollbar {
+    overflow: scroll;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+
+  /* FLOATS */
+  .clearfix {
+    &::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  /* ABSOLUTE POSITION */
+  .absolute-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* FLEX */
+  .flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+body {
+  font-family: theme('fontFamily.default');
+}
+
+#root {
+  background-image: url('./landing-bg.webp');
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: theme('colors.stone.100');
+}
+
+html {
+  @media only screen and (max-width: 900px) {
+    font-size: 95%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 90%;
+  }
+}
+
+/* 
+::selection {
+  color: inherit;
+  background: theme(colors.stone.500);
+}
+
+Code for Firefox
+::-moz-selection {
+  color: inherit;
+  background: theme(colors.stone.500);
+}
+*/
