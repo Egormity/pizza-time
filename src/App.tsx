@@ -1,5 +1,18 @@
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import AppLoyaut from './pages/AppLoyaut';
+import HomePage from './pages/HomePage';
+import MenuPage from './pages/MenuPage';
+
 export default function App() {
   return (
-    <h1 className='text-2xl'>Ordering your fave Pizza is quick and easy with our app or on our website.</h1>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<AppLoyaut />}>
+          <Route index element={<Navigate replace to={'HomePage'} />} />
+          <Route path='HomePage' element={<HomePage />} />
+          <Route path='MenuPage' element={<MenuPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
