@@ -36,27 +36,72 @@
     justify-content: center;
     align-items: center;
   }
+
+  .padding-page-x {
+    padding: 0 1rem;
+  }
+
+  .max-width-page {
+    max-width: 90vw;
+
+    @media only screen and (max-width: 1500px) {
+      max-width: 92.5vw;
+    }
+
+    @media only screen and (max-width: 1200px) {
+      max-width: 95vw;
+    }
+
+    @media only screen and (max-width: 900px) {
+      max-width: 100vw;
+    }
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 2.4rem;
+  }
+
+  @keyframes rotatation {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .spinner {
+    margin: 4.8rem auto;
+
+    width: 6.4rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background:
+      radial-gradient(farthest-side, theme('colors.primary-yellow-dark') 94%, #0000) top/10px 10px no-repeat,
+      conic-gradient(#0000 30%, theme('colors.primary-yellow-light'));
+    mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
+    animation: rotatation 1.5s infinite linear;
+  }
 }
 
 body {
   font-family: theme('fontFamily.default');
+  color: theme('textColor.zinc.100');
 }
 
 #root {
   background-image: url('./landing-bg.webp');
   background-attachment: fixed;
   min-height: 100vh;
-  color: theme('colors.stone.100');
 }
 
 html {
-  /* @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 900px) {
     font-size: 95%;
   }
 
   @media only screen and (max-width: 600px) {
     font-size: 90%;
-  } */
+  }
 }
 
 /* 

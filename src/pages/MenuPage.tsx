@@ -1,3 +1,3 @@
 export default function MenuPage() {
-  return <div>MenuPage</div>;
+  return <div className='p-32'>MenuPage</div>;
 }

@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../Features/Navbar/Navbar';
+import Footer from '../Features/Footer/Footer';
 
 export default function AppLoyaut() {
   return (
-    <div>
+    <div className='overflow-y-visible'>
       <Navbar />
 
-      <main>
+      <main className='min-h-[75vh]'>
         <Outlet />
       </main>
 

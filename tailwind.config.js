@@ -5,7 +5,8 @@ export default {
     extend: {
       fontFamily: {
         default: ['Poppins', 'sans-serif'],
-        cursive: ['Nothing You Could Do'],
+        cursive: ['Nothing You Could Do', 'sans-serif'],
+        pizza: ['Playwrite HU', 'sans-serif'],
       },
 
       fontSize: {
@@ -13,12 +14,14 @@ export default {
       },
 
       colors: {
+        'primary-yellow': '#ffe600',
         'primary-yellow-light': '#fac564',
         'primary-yellow-dark': '#d3a85b',
         'primary-red': '#ff6240',
       },
 
       backgroundColor: {
+        'primary-yellow': '#ffe600',
         'primary-yellow-light': '#fac564',
         'primary-yellow-dark': '#d3a85b',
         'primary-red': '#ff6240',
