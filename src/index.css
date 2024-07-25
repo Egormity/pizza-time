@@ -110,7 +110,8 @@
 
   .bg-about-1,
   .bg-about-2,
-  .bg-about-3 {
+  .bg-about-3,
+  .bg-contacts {
     background-position: center;
     background-size: cover;
   }
@@ -125,6 +126,26 @@
 
   .bg-about-3 {
     background-image: url('about/section-2.jpeg');
+  }
+
+  .bg-contacts {
+    background-image: url('images-row/img-1.webp');
+  }
+
+  @keyframes rollUp {
+    from {
+      transform: translate(0);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(-1.75rem);
+      opacity: 1;
+    }
+  }
+
+  .form-required {
+    animation: rollUp theme('transitionDuration.primary') ease-out forwards;
   }
 }
 

@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import MenuPage from './pages/MenuPage';
 import BlogPage from './pages/BlogPage';
 import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
+import ContactsPage from './pages/ContactsPage';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import CareersPage from './pages/CareersPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -36,7 +36,7 @@ export default function App() {
             <Route path='MenuPage' element={<MenuPage />} />
             <Route path='BlogPage' element={<BlogPage />} />
             <Route path='AboutPage' element={<AboutPage />} />
-            <Route path='ContactPage' element={<ContactPage />} />
+            <Route path='ContactsPage' element={<ContactsPage />} />
 
             <Route path='CareersPage' element={<CareersPage />} />
             <Route path='PrivacyPage' element={<PrivacyPage />} />

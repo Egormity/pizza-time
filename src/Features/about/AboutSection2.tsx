@@ -1,6 +1,6 @@
 import AboutArticle from '../../ui/AboutArticle';
-import DivMaxWidth from '../../ui/loyauts/DivMaxWidth';
 import Overlay from '../../ui/Overlay';
+import { maxWidthPage } from '../../utils/classNames';
 
 export default function AboutSection3() {
   return (
@@ -8,7 +8,7 @@ export default function AboutSection3() {
       <Overlay />
 
       <div className='max-w-medium mx-auto'>
-        <DivMaxWidth className='py-8'>
+        <div className={`${maxWidthPage} py-8`}>
           <AboutArticle cursive='DEDICATED' heading='Changing the world together' className='relative z-20'>
             We believe that our success is due to our commitment to providing high-quality food and
             exceptional service. Our menu features a wide range of delicious pizzas, salads, sandwiches, pasta
@@ -19,7 +19,7 @@ export default function AboutSection3() {
             Our team of dedicated staff members is committed to providing a warm, welcoming atmosphere that
             makes every guest feel like they are part of the family.
           </AboutArticle>
-        </DivMaxWidth>
+        </div>
       </div>
     </section>
   );

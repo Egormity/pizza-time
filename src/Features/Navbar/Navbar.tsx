@@ -50,7 +50,7 @@ export default function Navbar() {
             {isMenuOpen && (
               <>
                 <ul className='flex flex-col items-end gap-4'>
-                  <GenerateLinks linkNames={navLinkNames} />
+                  <GenerateLinks linkNames={navLinkNames} customFunc={() => setIsMenuOpen(false)} />
                 </ul>
 
                 <ul className='flex flex-col items-end gap-4'>

@@ -1,13 +1,13 @@
 import { useScreenSize } from '../../hooks/useScreenSize';
 import AboutArticle from '../../ui/AboutArticle';
 import Button from '../../ui/Button';
-import DivMaxWidth from '../../ui/loyauts/DivMaxWidth';
+import { maxWidthPage } from '../../utils/classNames';
 
 export default function AboutSection3() {
   const { screenWidth } = useScreenSize();
 
   return (
-    <DivMaxWidth className='px-0 max800px:space-y-8 max800px:pt-8'>
+    <div className={`${maxWidthPage} px-0 max800px:space-y-8 max800px:pt-8`}>
       <div className='grid grid-cols-2 max800px:grid-cols-1'>
         <div className='space-y-4 p-6 max800px:p-4'>
           <AboutArticle cursive='CAREERS' heading='Join the team'>
@@ -39,7 +39,7 @@ export default function AboutSection3() {
           </>
         )}
       </div>
-    </DivMaxWidth>
+    </div>
   );
 }
 

@@ -6,7 +6,7 @@ import AboutSection4 from '../Features/about/AboutSection4';
 import LongPizza from '../ui/LongPizza';
 import FourImagesRow from '../ui/FourImagesRow';
 import ThreeImagesRow from '../ui/ThreeImagesRow';
-import DivMaxWidth from '../ui/loyauts/DivMaxWidth';
+import { maxWidthPage } from '../utils/classNames';
 
 export default function AboutPage() {
   return (
@@ -17,9 +17,9 @@ export default function AboutPage() {
 
       <AboutSection2 />
 
-      <DivMaxWidth className='pt-8'>
+      <div className={`${maxWidthPage} pt-8`}>
         <ThreeImagesRow />
-      </DivMaxWidth>
+      </div>
 
       <AboutSection3 />
 
