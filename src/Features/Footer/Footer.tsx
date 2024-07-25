@@ -5,7 +5,7 @@ import { footerLinks, navLinkNames } from '../../data/dataToMap';
 
 export default function Footer() {
   return (
-    <footer className='padding-page-x bg-zinc-900 py-10'>
+    <footer className='padding-page-x bg-zinc-900 py-10 max700px:py-2'>
       <div className='max-width-page mx-auto grid grid-cols-3 divide-zinc-500 max700px:grid-cols-1 max700px:divide-y min700px:divide-x'>
         <div className='max700px:py-8'>
           <ul className='grid justify-items-center gap-4'>

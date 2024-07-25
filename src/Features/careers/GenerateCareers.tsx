@@ -8,7 +8,7 @@ export default function GenerateCareers() {
   return isLoadingFooterPageContent ? (
     <Spinner />
   ) : (
-    <div className='mx-auto max-w-[1000px] divide-y divide-zinc-500 py-8'>
+    <div className='max-w-medium mx-auto divide-y divide-zinc-500 py-8'>
       {footerPageContent?.map(career => (
         <div key={career.id} className='grid grid-cols-[1fr_max-content] gap-6 py-8 text-left'>
           <h2 className='col-span-full text-lg font-bold'>{career.heading}</h2>

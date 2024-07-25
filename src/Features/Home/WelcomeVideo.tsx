@@ -1,12 +1,13 @@
 import Button from '../../ui/Button';
+import Overlay from '../../ui/Overlay';
 
 export default function WelcomeVideo() {
   return (
     <section className='relative flex h-screen items-center justify-center'>
       <video autoPlay muted loop className='absolute left-0 top-0 h-full w-full object-cover'>
-        <source src='hero-bg.mp4' type='video/mp4' />
+        <source src='home/hero-bg.mp4' type='video/mp4' />
       </video>
-      <div className='absolute z-10 h-full w-full bg-zinc-950 bg-opacity-75' />
+      <Overlay />
 
       <div className='padding-page-x max-width-page z-20 mx-auto flex flex-col items-center gap-2 text-center'>
         <h3 className='font-cursive text-4xl text-primary-red'>Welcome</h3>

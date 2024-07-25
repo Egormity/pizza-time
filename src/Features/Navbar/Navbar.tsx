@@ -18,7 +18,7 @@ export default function Navbar() {
       <ul className='max-width-page mx-auto flex items-center gap-6 text-lg max1000px:gap-5'>
         <li className='mr-auto'>
           <NavLink to='HomePage' className='flex cursor-pointer items-center gap-3'>
-            <img src='logo.png' className='h-16' />
+            <img src='global/logo.png' className='h-16' />
             <h3 className='font-pizza text-lg font-semibold tracking-widest'>
               Pizza <br /> <span className='text-primary-yellow'>Time</span>
             </h3>
