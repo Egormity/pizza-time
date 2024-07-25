@@ -1,8 +1,7 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
-import { getPosts } from '../../services/apiBlog';
 import { useSearchParams } from 'react-router-dom';
-import { ITEMS_PER_PAGE } from '../../utils/constants';
-import { Post } from '../../utils/types';
+import { getPosts } from '../services/apiBlog';
+import { ITEMS_PER_PAGE } from '../utils/constants';
 
 export function usePosts() {
   const [searchParams, setSearchParams] = useSearchParams();

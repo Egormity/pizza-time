@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 import { useScreenSize } from '../../hooks/useScreenSize';
 import { useState } from 'react';
-import NavLinks from '../../ui/NavLinks';
+import GenerateLinks from '../../ui/GenerateLinks';
 import NavButtons from './NavbarButtons';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
+import { navLinkNames } from '../../data/dataToMap';
 
 export default function Navbar() {
   const { screenWidth } = useScreenSize();
@@ -26,7 +27,7 @@ export default function Navbar() {
 
         {screenWidth > 800 ? (
           <>
-            <NavLinks />
+            <GenerateLinks linkNames={navLinkNames} />
             <NavButtons />
           </>
         ) : (
@@ -49,7 +50,7 @@ export default function Navbar() {
             {isMenuOpen && (
               <>
                 <ul className='flex flex-col items-end gap-4'>
-                  <NavLinks />
+                  <GenerateLinks linkNames={navLinkNames} />
                 </ul>
 
                 <ul className='flex flex-col items-end gap-4'>

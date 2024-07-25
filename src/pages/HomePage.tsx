@@ -1,4 +1,4 @@
-import WelcomeVideo from '../Features/Home/WelcomeVideo';
+import WelcomeVideo from '../Features/home/WelcomeVideo';
 
 export default function HomePage() {
   return (

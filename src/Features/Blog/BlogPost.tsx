@@ -1,8 +1,8 @@
+import { usePosts } from '../../hooks/usePosts';
 import Button from '../../ui/Button';
 import Spinner from '../../ui/Spinner';
 import { formatDate } from '../../utils/formatDate';
 import { Post } from '../../utils/types';
-import { usePosts } from './usePosts';
 
 export default function BlogPost() {
   const { posts, isLoadingPosts } = usePosts();

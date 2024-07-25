@@ -1,5 +1,7 @@
 import { BiLoaderAlt } from 'react-icons/bi';
 
-export default function Spinner() {
-  return <BiLoaderAlt className='spinner-mini text-primary-yellow-dark' />;
+type MiniSpinnerType = { className?: string };
+
+export default function Spinner({ className }: MiniSpinnerType) {
+  return <BiLoaderAlt className={`${className} spinner-mini text-primary-yellow-dark`} />;
 }

@@ -22,7 +22,6 @@ export async function getPosts({ filterField, filterValue, page }: Filter) {
   }
 
   const { data, error, count }: { data: Post[]; error: string; count: number } = await query;
-  console.log(data);
 
   if (error) {
     console.log('!!! ERRRRRROR !!!', error);

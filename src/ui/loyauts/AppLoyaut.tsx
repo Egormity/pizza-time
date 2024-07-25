@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import Navbar from '../Features/Navbar/Navbar';
-import Footer from '../Features/Footer/Footer';
+import Navbar from '../../Features/navbar/Navbar';
+import Footer from '../../Features/footer/Footer';
 
 export default function AppLoyaut() {
   return (

@@ -1,14 +1,15 @@
 import { useSearchParams } from 'react-router-dom';
+
 import Spinner from '../../ui/Spinner';
-import { usePosts } from './usePosts';
 import { Post } from '../../utils/types';
 import { formatDate } from '../../utils/formatDate';
+import { usePosts } from '../../hooks/usePosts';
 
 export default function BlogPosts() {
   const { posts, isLoadingPosts } = usePosts();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  if (isLoadingPosts) return <Spinner />;
+  if (isLoadingPosts) return <Spinner className='col-span-full row-span-full' />;
   if (!posts) return <h1 className='text-4xl font-black'>Posts could not be loaded..</h1>;
 
   function handleClick(value: string) {

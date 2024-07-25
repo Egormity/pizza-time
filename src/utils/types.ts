@@ -10,3 +10,10 @@ export type Post = {
   description: string;
   content: string;
 };
+
+export type FooterPageContentProps = {
+  id: number;
+  createdAt: string;
+  heading: string;
+  description: string;
+};

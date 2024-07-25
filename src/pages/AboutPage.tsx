@@ -1,3 +1,3 @@
 export default function AboutPage() {
-  return <div className='p-32'>AboutPage</div>;
+  return <div className='bg-about'>123</div>;
 }
