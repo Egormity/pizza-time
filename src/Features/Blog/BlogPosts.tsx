@@ -1,22 +1,22 @@
 import { useSearchParams } from 'react-router-dom';
 import Spinner from '../../ui/Spinner';
 import { usePosts } from './usePosts';
-import { Post } from './BlogTypes';
+import { Post } from '../../utils/types';
+import { formatDate } from '../../utils/formatDate';
 
 export default function BlogPosts() {
   const { posts, isLoadingPosts } = usePosts();
   const [searchParams, setSearchParams] = useSearchParams();
 
   if (isLoadingPosts) return <Spinner />;
-
-  const sortedPosts: Post[] = posts.sort((a: Post, b: Post) => a.id - b.id);
+  if (!posts) return <h1 className='text-4xl font-black'>Posts could not be loaded..</h1>;
 
   function handleClick(value: string) {
     searchParams.set('post', value);
     setSearchParams(searchParams);
   }
 
-  return sortedPosts.map((post: Post) => (
+  return posts.map((post: Post) => (
     <div
       key={post.id}
       className='cursor-pointer space-y-4 overflow-hidden rounded-xl border border-zinc-800 text-left duration-primary hover:-translate-y-1 hover:bg-zinc-500 hover:bg-opacity-10'
@@ -28,7 +28,7 @@ export default function BlogPosts() {
 
       <div className='space-y-4 px-3 pb-3'>
         <div className='flex gap-4 text-zinc-300'>
-          <p>{post.postDate}</p>
+          <p>{formatDate(post.postDate, 'text')}</p>
           <p>By {post.author}</p>
         </div>
 

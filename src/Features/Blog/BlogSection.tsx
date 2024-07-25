@@ -3,10 +3,12 @@ import { useSearchParams } from 'react-router-dom';
 import BlogPosts from './BlogPosts';
 import BlogPost from './BlogPost';
 import { usePosts } from './usePosts';
+import Pagination from '../../ui/Pagination';
+import Spinner from '../../ui/Spinner';
 
 export default function BlogSection() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { count } = usePosts();
+  const { count, isLoadingPosts } = usePosts();
 
   if (!searchParams.get('post'))
     return (
@@ -17,14 +19,10 @@ export default function BlogSection() {
           recipes and pizza-making tips.
         </p>
 
-        <div className='blog-grid py-20'>
-          <BlogPosts />
-        </div>
+        <div className='blog-grid py-20'>{isLoadingPosts ? <Spinner /> : <BlogPosts />}</div>
 
-        <div className='flex justify-evenly'>
-          <p>
-            {` < 1 ... 3 >`} (all - {count})
-          </p>
+        <div className='flex items-center justify-between pb-12'>
+          <Pagination count={count} />
         </div>
       </section>
     );

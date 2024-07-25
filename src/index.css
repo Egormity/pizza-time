@@ -38,15 +38,15 @@
   }
 
   .padding-page-x {
+    @media only screen and (min-width: 1200px) {
+      padding: 0 3rem;
+    }
+
     padding: 0 1rem;
   }
 
   .max-width-page {
-    max-width: 90vw;
-
-    @media only screen and (max-width: 1500px) {
-      max-width: 92.5vw;
-    }
+    max-width: 1500px;
 
     @media only screen and (max-width: 1200px) {
       max-width: 95vw;
@@ -61,6 +61,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     grid-gap: 2.4rem;
+
+    @media only screen and (min-width: 1300px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   @keyframes rotatation {
@@ -81,6 +85,12 @@
     mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
     animation: rotatation 1.5s infinite linear;
   }
+
+  .spinner-mini {
+    width: 2.4rem;
+    height: 2.4rem;
+    animation: rotatation 1.5s infinite linear;
+  }
 }
 
 body {
@@ -92,6 +102,8 @@ body {
   background-image: url('./landing-bg.webp');
   background-attachment: fixed;
   min-height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
 
 html {
@@ -102,6 +114,10 @@ html {
   @media only screen and (max-width: 600px) {
     font-size: 90%;
   }
+}
+
+* :disabled {
+  cursor: not-allowed;
 }
 
 /* 

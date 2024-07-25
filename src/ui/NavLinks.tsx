@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { NavLinkNames } from '../../data/dataToMap';
+import { NavLinkNames } from '../data/dataToMap';
 
 export default function NavLinks() {
   return NavLinkNames.map(item => (

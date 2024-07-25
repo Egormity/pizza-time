@@ -6,9 +6,10 @@ type ButtonProps = {
   type: 'red' | 'yellow' | 'red-transparent' | 'gray';
   to?: string | -1;
   customFunc?: () => void;
+  disabled?: boolean;
 };
 
-export default function Button({ children, type, to, customFunc }: ButtonProps) {
+export default function Button({ children, type, to, customFunc, disabled }: ButtonProps) {
   const navigate = useNavigate();
 
   let className =
@@ -29,6 +30,7 @@ export default function Button({ children, type, to, customFunc }: ButtonProps) 
 
   return (
     <button
+      disabled={disabled}
       className={className}
       onClick={() => {
         if (to) navigate(to);
