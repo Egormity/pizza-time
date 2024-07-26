@@ -152,6 +152,12 @@
   .form-required {
     animation: rollUp theme('transitionDuration.primary') ease-out forwards;
   }
+
+  .menu-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  }
 }
 
 body {

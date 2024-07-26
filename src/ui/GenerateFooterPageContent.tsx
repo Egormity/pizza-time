@@ -1,13 +1,21 @@
 import { FooterPageContentProps } from '../utils/types';
+import NoDataFound from './NoDataFound';
 import Spinner from './Spinner';
 
 type GenerateFooterPageContentProps = {
   items: FooterPageContentProps[];
   isLoading: boolean;
+  notFound: string;
 };
 
-export default function GenerateFooterPageContent({ items, isLoading }: GenerateFooterPageContentProps) {
+export default function GenerateFooterPageContent({
+  items,
+  isLoading,
+  notFound,
+}: GenerateFooterPageContentProps) {
   if (isLoading) return <Spinner />;
+
+  if (!items) return <NoDataFound dataName={notFound} />;
 
   return (
     <div className='grid gap-8 py-10'>

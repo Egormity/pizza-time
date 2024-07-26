@@ -1,5 +1,5 @@
-import ContactsForm from '../Features/contants/ContactsForm';
-import ContactUs from '../Features/contants/ContactUs';
+import ContactsForm from '../Features/contacts/ContactsForm';
+import ContactUs from '../Features/contacts/ContactUs';
 import { maxWidthPage } from '../utils/classNames';
 
 export default function ContactsPage() {

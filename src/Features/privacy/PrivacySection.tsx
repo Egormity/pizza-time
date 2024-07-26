@@ -1,6 +1,6 @@
-import { useFooterPageContent } from '../../hooks/useFooterPageContent';
 import FooterPageLoyaut from '../../ui/loyauts/FooterPageLoyaut';
 import GenerateFooterPageContent from '../../ui/GenerateFooterPageContent';
+import { useFooterPageContent } from '../../hooks/useFooterPageContent';
 
 export default function PrivacySection() {
   const { footerPageContent, isLoadingFooterPageContent } = useFooterPageContent('privacy');
@@ -13,7 +13,11 @@ export default function PrivacySection() {
         services, you ("you," "your," or "user") consent to the practices described in this Policy.{' '}
       </p>
 
-      <GenerateFooterPageContent items={footerPageContent} isLoading={isLoadingFooterPageContent} />
+      <GenerateFooterPageContent
+        notFound='privacy'
+        items={footerPageContent}
+        isLoading={isLoadingFooterPageContent}
+      />
 
       <p className='pb-10 text-zinc-300'>
         If you have any questions or concerns regarding our Privacy Policy, please contact us at

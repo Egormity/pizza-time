@@ -1,9 +1,9 @@
-import { useFooterPageContent } from '../../hooks/useFooterPageContent';
 import FooterPageLoyaut from '../../ui/loyauts/FooterPageLoyaut';
 import GenerateFooterPageContent from '../../ui/GenerateFooterPageContent';
+import { useFooterPageContent } from '../../hooks/useFooterPageContent';
 
 export default function PrivacySection() {
-  const { footerPageContent, isLoadingFooterPageContent } = useFooterPageContent('refunds');
+  const { footerPageContent, isLoadingFooterPageContent } = useFooterPageContent('privacy');
 
   return (
     <FooterPageLoyaut heading='Refunds'>
@@ -13,7 +13,11 @@ export default function PrivacySection() {
         services, you ("you," "your," or "user") agree to comply with this Policy regarding refund requests.
       </p>
 
-      <GenerateFooterPageContent items={footerPageContent} isLoading={isLoadingFooterPageContent} />
+      <GenerateFooterPageContent
+        notFound='privacy'
+        items={footerPageContent}
+        isLoading={isLoadingFooterPageContent}
+      />
     </FooterPageLoyaut>
   );
 }

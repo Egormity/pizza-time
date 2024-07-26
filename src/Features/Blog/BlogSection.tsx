@@ -16,7 +16,7 @@ export default function BlogSection() {
 
       <div className='blog-grid py-20'>{isLoadingPosts ? <Spinner /> : <BlogPosts />}</div>
 
-      <div className='flex items-center justify-between pb-12'>
+      <div className='pb-12'>
         <Pagination count={count} />
       </div>
     </section>

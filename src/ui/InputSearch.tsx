@@ -1,12 +1,13 @@
 import { RxMagnifyingGlass } from 'react-icons/rx';
+import { borderDarkWithRing } from '../utils/classNames';
 
-export default function InputSearch() {
+export default function InputSearch({ width }: { width?: string }) {
   return (
-    <div className='relative'>
+    <div className={`${width} relative`}>
       <input
         id='search'
         placeholder='Search'
-        className='rounded-2xl border border-zinc-600 bg-transparent px-5 py-4 outline-none ring-zinc-700 duration-primary hover:ring focus:ring focus:ring-zinc-400'
+        className={`${borderDarkWithRing} ${width} rounded-2xl px-5 py-4`}
       />
 
       <label

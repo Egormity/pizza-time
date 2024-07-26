@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { scrollToTop } from '../utils/scrollToTop';
 
 type GenerateNavLinksProps = {
   linkNames: string[];
@@ -11,7 +12,7 @@ export default function GenerateNavLinks({ linkNames, customFunc }: GenerateNavL
       <NavLink
         to={`${item}Page`}
         onClick={() => {
-          window.scrollTo(0, 0);
+          scrollToTop();
           customFunc && customFunc();
         }}
         className={({ isActive }) => (isActive ? 'text-primary-red' : '')}

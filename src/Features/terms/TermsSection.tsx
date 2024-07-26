@@ -1,9 +1,9 @@
-import { useFooterPageContent } from '../../hooks/useFooterPageContent';
 import FooterPageLoyaut from '../../ui/loyauts/FooterPageLoyaut';
 import GenerateFooterPageContent from '../../ui/GenerateFooterPageContent';
+import { useFooterPageContent } from '../../hooks/useFooterPageContent';
 
 export default function PrivacySection() {
-  const { footerPageContent, isLoadingFooterPageContent } = useFooterPageContent('terms');
+  const { footerPageContent, isLoadingFooterPageContent } = useFooterPageContent('privacy');
 
   return (
     <FooterPageLoyaut heading='Terms'>
@@ -13,7 +13,11 @@ export default function PrivacySection() {
         carefully before proceeding.
       </p>
 
-      <GenerateFooterPageContent items={footerPageContent} isLoading={isLoadingFooterPageContent} />
+      <GenerateFooterPageContent
+        notFound='privacy'
+        items={footerPageContent}
+        isLoading={isLoadingFooterPageContent}
+      />
     </FooterPageLoyaut>
   );
 }
