@@ -1,9 +1,9 @@
 import { IoClose, IoMenu } from 'react-icons/io5';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { useScreenSize } from '../../hooks/useScreenSize';
 import { useState } from 'react';
-import GenerateLinks from '../../ui/GenerateLinks';
+import GenerateNavLinks from '../../ui/GenerateNavLinks';
 import NavButtons from './NavbarButtons';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
 import { navLinkNames } from '../../data/dataToMap';
@@ -17,17 +17,21 @@ export default function Navbar() {
     <nav className='padding-page-x fixed z-50 w-screen border-b border-zinc-800 bg-zinc-900 py-2 pr-10 shadow-lg min1200px:pr-16'>
       <ul className='max-width-page mx-auto flex items-center gap-6 text-lg max1000px:gap-5'>
         <li className='mr-auto'>
-          <NavLink to='HomePage' className='flex cursor-pointer items-center gap-3'>
+          <Link
+            to='HomePage'
+            className='flex cursor-pointer items-center gap-3'
+            onClick={() => window.scrollTo(0, 0)}
+          >
             <img src='global/logo.png' className='h-16' />
             <h3 className='font-pizza text-lg font-semibold tracking-widest'>
               Pizza <br /> <span className='text-primary-yellow'>Time</span>
             </h3>
-          </NavLink>
+          </Link>
         </li>
 
         {screenWidth > 800 ? (
           <>
-            <GenerateLinks linkNames={navLinkNames} />
+            <GenerateNavLinks linkNames={navLinkNames} />
             <NavButtons />
           </>
         ) : (
@@ -50,7 +54,7 @@ export default function Navbar() {
             {isMenuOpen && (
               <>
                 <ul className='flex flex-col items-end gap-4'>
-                  <GenerateLinks linkNames={navLinkNames} customFunc={() => setIsMenuOpen(false)} />
+                  <GenerateNavLinks linkNames={navLinkNames} customFunc={() => setIsMenuOpen(false)} />
                 </ul>
 
                 <ul className='flex flex-col items-end gap-4'>

@@ -13,6 +13,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import RefundsPage from './pages/RefundsPage';
 import TermsPage from './pages/TermsPage';
 import PageNotFound from './pages/PageNotFound';
+import { Toaster } from 'react-hot-toast';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -47,6 +48,23 @@ export default function App() {
           <Route path='*' element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+
+      <Toaster
+        position='top-center'
+        gutter={12}
+        containerStyle={{ margin: '8px' }}
+        toastOptions={{
+          success: { duration: 3000 },
+          error: { duration: 5000 },
+          style: {
+            fontSize: '16px',
+            maxWidth: '500px',
+            padding: '16px 24px',
+            backgroundColor: 'var(--toast-bg-dark)',
+            color: 'var(--toast-text-light)',
+          },
+        }}
+      />
     </QueryClientProvider>
   );
 }

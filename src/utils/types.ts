@@ -17,3 +17,11 @@ export type FooterPageContentProps = {
   heading: string;
   description: string;
 };
+
+export type MenuCategory = {
+  id: number;
+  createdAt: string;
+  name: string;
+  image: string;
+  description?: string;
+};

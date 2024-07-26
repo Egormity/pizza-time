@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+  :root {
+    --toast-bg-dark: theme(backgroundColor.zinc.800);
+    --toast-text-light: theme(backgroundColor.zinc.100);
+  }
+
   /* SCROLL WITH NO SCROLL BAR */
   .no-scrollbar {
     overflow: scroll;

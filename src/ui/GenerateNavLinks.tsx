@@ -1,16 +1,19 @@
 import { NavLink } from 'react-router-dom';
 
-type GenerateLinksProps = {
+type GenerateNavLinksProps = {
   linkNames: string[];
   customFunc?: () => void;
 };
 
-export default function GenerateLinks({ linkNames, customFunc }: GenerateLinksProps) {
+export default function GenerateNavLinks({ linkNames, customFunc }: GenerateNavLinksProps) {
   return linkNames.map(item => (
     <li key={item} className='cursor-pointer duration-primary hover:text-primary-red'>
       <NavLink
         to={`${item}Page`}
-        onClick={() => customFunc && customFunc()}
+        onClick={() => {
+          window.scrollTo(0, 0);
+          customFunc && customFunc();
+        }}
         className={({ isActive }) => (isActive ? 'text-primary-red' : '')}
       >
         {item}

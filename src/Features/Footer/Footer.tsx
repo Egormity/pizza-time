@@ -1,6 +1,6 @@
 import { FaGithub } from 'react-icons/fa6';
 
-import GenerateLinks from '../../ui/GenerateLinks';
+import GenerateNavLinks from '../../ui/GenerateNavLinks';
 import { footerLinks, navLinkNames } from '../../data/dataToMap';
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className='max-width-page mx-auto grid grid-cols-3 divide-zinc-500 max700px:grid-cols-1 max700px:divide-y min700px:divide-x'>
         <div className='max700px:py-8'>
           <ul className='grid justify-items-center gap-4'>
-            <GenerateLinks linkNames={navLinkNames} />
+            <GenerateNavLinks linkNames={navLinkNames} />
 
             <li>
               <a href='https://github.com/Egormity/pizza-time' target='_blanc' className='text-5xl'>
@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div className='max700px:py-8'>
           <ul className='grid justify-items-center gap-3'>
-            <GenerateLinks linkNames={footerLinks} />
+            <GenerateNavLinks linkNames={footerLinks} />
           </ul>
         </div>
 
