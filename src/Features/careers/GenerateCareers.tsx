@@ -17,7 +17,7 @@ export default function GenerateCareers() {
           <h2 className='col-span-full text-lg font-bold'>{career.heading}</h2>
           <p className='text-sm text-zinc-400'>{career.description}</p>
           <div className='ml-6 flex items-end'>
-            <Button type='red' to='/ContactPage'>
+            <Button variation='red' to='/ContactsPage'>
               Apply
             </Button>
           </div>

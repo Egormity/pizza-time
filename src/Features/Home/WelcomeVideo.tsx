@@ -17,10 +17,10 @@ export default function WelcomeVideo() {
         </p>
 
         <div className='mt-4 flex gap-4'>
-          <Button type='yellow' to='/BlogPage'>
+          <Button variation='yellow' to='/BlogPage'>
             Read Blog
           </Button>
-          <Button type='gray' to='/MenuPage'>
+          <Button variation='gray' to='/MenuPage'>
             View Menu
           </Button>
         </div>

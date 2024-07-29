@@ -18,7 +18,7 @@ export default function AboutSection3() {
             ervice industry or have years of experience under your belt, we offer a supportive and
             collaborative work environment that encourages personal and professional growth.
           </AboutArticle>
-          <Button type='red'>Join now</Button>
+          <Button variation='red'>Join now</Button>
         </div>
 
         <div>
@@ -61,7 +61,7 @@ function Div() {
         sandwiches and pasta dishes, so you can be sure there's something for everyone to enjoy. Don't forget,
         Pizza Time is a fictional pizza restaurant made by Ekaterine Mitagvaria.
       </AboutArticle>
-      <Button type='red'>Request a call</Button>
+      <Button variation='red'>Request a call</Button>
     </div>
   );
 }

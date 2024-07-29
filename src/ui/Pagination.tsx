@@ -4,6 +4,7 @@ import Button from './Button';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import SpinnerMini from './SpinnerMini';
 import { scrollToTop } from '../utils/scrollToTop';
+import { useLayoutEffect } from 'react';
 
 export default function Pagination({ count }: { count: number }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -33,7 +34,7 @@ export default function Pagination({ count }: { count: number }) {
       </p>
 
       <div className='flex items-center gap-6'>
-        <Button type='yellow' disabled={currentPage === 1} customFunc={prevPage}>
+        <Button variation='yellow' disabled={currentPage === 1} customFunc={prevPage}>
           <HiChevronLeft /> <span>Previous</span>
         </Button>
 
@@ -45,7 +46,7 @@ export default function Pagination({ count }: { count: number }) {
           <SpinnerMini />
         )}
 
-        <Button type='yellow' disabled={currentPage === pageCount} customFunc={nextPage}>
+        <Button variation='yellow' disabled={currentPage === pageCount} customFunc={nextPage}>
           <span>Next</span> <HiChevronRight />
         </Button>
       </div>

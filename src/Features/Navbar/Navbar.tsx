@@ -7,6 +7,7 @@ import GenerateNavLinks from '../../ui/GenerateNavLinks';
 import NavButtons from './NavbarButtons';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
 import { navLinkNames } from '../../data/dataToMap';
+import { scrollToTop } from '../../utils/scrollToTop';
 
 export default function Navbar() {
   const { screenWidth } = useScreenSize();
@@ -17,11 +18,7 @@ export default function Navbar() {
     <nav className='padding-page-x fixed z-50 w-screen border-b border-zinc-800 bg-zinc-900 py-2 pr-10 shadow-lg min1200px:pr-16'>
       <ul className='max-width-page mx-auto flex items-center gap-6 text-lg max1000px:gap-5'>
         <li className='mr-auto'>
-          <Link
-            to='HomePage'
-            className='flex cursor-pointer items-center gap-3'
-            onClick={() => window.scrollTo(0, 0)}
-          >
+          <Link to='HomePage' className='flex cursor-pointer items-center gap-3' onClick={scrollToTop}>
             <img src='global/logo.png' className='h-16' />
             <h3 className='font-pizza text-lg font-semibold tracking-widest'>
               Pizza <br /> <span className='text-primary-yellow'>Time</span>
@@ -29,10 +26,10 @@ export default function Navbar() {
           </Link>
         </li>
 
-        {screenWidth > 800 ? (
+        {screenWidth > 925 ? (
           <>
             <GenerateNavLinks linkNames={navLinkNames} />
-            <NavButtons />
+            <NavButtons customFunc={() => setIsMenuOpen(false)} />
           </>
         ) : (
           <ul
@@ -58,7 +55,7 @@ export default function Navbar() {
                 </ul>
 
                 <ul className='flex flex-col items-end gap-4'>
-                  <NavButtons />
+                  <NavButtons customFunc={() => setIsMenuOpen(false)} />
                 </ul>
               </>
             )}

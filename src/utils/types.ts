@@ -1,4 +1,4 @@
-import { menuFilters, pizzaSizes } from '../data/dataToMap';
+import { menuFilters, menuSorting, pizzaSizes } from '../data/dataToMap';
 
 export type UnionOmit<T, K extends string | number | symbol> = T extends unknown ? Omit<T, K> : never;
 
@@ -27,10 +27,43 @@ export type MenuCategoryItem = {
   image: string;
   description?: string;
   price: number;
-  salePrice?: number;
-  type?: 'pizza';
+  discount: number;
+  type: string;
 };
 
 export type MenuFiltersTypes = (typeof menuFilters)[number];
 
 export type pizzaSizesTypes = (typeof pizzaSizes)[number];
+
+export type MenuSortingTypes = (typeof menuSorting)[number];
+
+export type AccountLogInOptions = 'start' | 'signUp' | 'logIn';
+
+export type UserType = {
+  fullName: string;
+  email: string;
+  password: string;
+  id: string;
+};
+
+export type SignUpUser = UserType & {
+  passwordConfirm: string;
+};
+
+export type CartItem = {
+  quantity: number;
+  totalPrice: number;
+  totalDiscount: number;
+  itemId: number;
+  name: string;
+  image: string;
+  description?: string | null;
+  price: number;
+  discount: number;
+  type: string;
+};
+
+export type CartType = {
+  id: string;
+  content: CartItem[];
+};

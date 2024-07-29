@@ -34,7 +34,7 @@ export default function BlogPost() {
         <p className='whitespace-pre-line'>{post.content}</p>
       </div>
 
-      <Button type='red-transparent' to={-1}>
+      <Button variation='red-transparent' to={-1}>
         &larr; Go back
       </Button>
     </article>

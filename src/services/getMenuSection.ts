@@ -1,16 +1,25 @@
 import { ITEMS_PER_PAGE } from '../utils/constants';
-import { MenuCategoryItem } from '../utils/types';
+import { MenuCategoryItem, MenuFiltersTypes, MenuSortingTypes } from '../utils/types';
 import { supabase } from './supabase';
 
 type getMenuSectionProps = {
-  select: string;
+  select: MenuFiltersTypes;
   page: number;
+  sortBy: MenuSortingTypes;
 };
 
-export async function getMenuSection({ select, page }: getMenuSectionProps) {
-  if (select === 'none') return {};
+export async function getMenuSection({ select, page, sortBy }: getMenuSectionProps) {
+  let query = supabase.from(select).select('*', { count: 'exact' });
 
-  let query = supabase.from(select).select('*', { count: 'exact' }).order('id', { ascending: true });
+  //--- SORTING ---//
+  if (sortBy && sortBy.toLowerCase() !== 'default') {
+    console.log(sortBy);
+    const [direction, field] = sortBy.split(' ');
+
+    query = query.order(field, {
+      ascending: direction === 'Lower',
+    });
+  }
 
   //--- PAGINATION ---//
   if (page) {

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
 import { menuFilters } from '../../data/dataToMap';
@@ -6,7 +5,6 @@ import { MenuFiltersTypes } from '../../utils/types';
 
 export default function MenuFiltering() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [activeFilter, setActiveFilter] = useState(searchParams.get('menu'));
 
   function handleClick(value: MenuFiltersTypes) {
     searchParams.set('menu', value);
@@ -14,8 +12,6 @@ export default function MenuFiltering() {
 
     searchParams.set('page', '1');
     setSearchParams(searchParams);
-
-    setActiveFilter(searchParams.get('menu'));
   }
 
   return (
@@ -28,7 +24,7 @@ export default function MenuFiltering() {
           <button
             disabled={false}
             onClick={() => handleClick(filter)}
-            className={` ${!activeFilter ? i === 0 && 'text-primary-red' : activeFilter === filter && 'text-primary-red'} capitalize duration-primary`}
+            className={` ${!searchParams.get('menu') ? i === 0 && 'text-primary-red' : searchParams.get('menu') === filter && 'text-primary-red'} capitalize duration-primary`}
           >
             {filter}
           </button>

@@ -1,5 +1,10 @@
 import { FaGithub } from 'react-icons/fa6';
 
+import visa from '../../../public/footer/visa-icon.svg';
+import masterCard from '../../../public/footer/mastercard-icon.svg';
+import applePay from '../../../public/footer/applepay-icon.svg';
+import googlePay from '../../../public/footer/googlepay-icon.svg';
+
 import GenerateNavLinks from '../../ui/GenerateNavLinks';
 import { footerLinks, navLinkNames } from '../../data/dataToMap';
 
@@ -31,6 +36,12 @@ export default function Footer() {
             <li>8 (800) 555 35-35</li>
             <li>pizza@pizzatime.com</li>
             <li>8:00am - 9:00pm</li>
+            <li className='flex gap-2'>
+              <img src={visa} alt='Visa icon' className='h-9' />
+              <img src={masterCard} alt='MasterCard icon' className='h-9' />
+              <img src={applePay} alt='ApplePay icon' className='h-9' />
+              <img src={googlePay} alt='GooglePay icon' className='h-9' />
+            </li>
           </ul>
         </div>
       </div>

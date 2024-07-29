@@ -30,11 +30,7 @@ export default function ContactsForm() {
             required: 'This field is required',
           })}
         />
-        {errors?.fullName?.message && (
-          <span className='form-required absolute left-0 top-0 text-primary-red'>
-            {errors.fullName.message}
-          </span>
-        )}
+        {errors?.fullName?.message && <span className='form-required'>{errors.fullName.message}</span>}
       </div>
 
       <div className='relative'>
@@ -48,9 +44,7 @@ export default function ContactsForm() {
           })}
         />
 
-        {errors?.email?.message && (
-          <span className='form-required absolute left-0 top-0 text-primary-red'>{errors.email.message}</span>
-        )}
+        {errors?.email?.message && <span className='form-required'>{errors.email.message}</span>}
       </div>
 
       <div className='relative'>
@@ -66,15 +60,11 @@ export default function ContactsForm() {
           })}
         />
 
-        {errors?.message?.message && (
-          <span className='form-required absolute left-0 top-0 text-primary-red'>
-            {errors.message.message}
-          </span>
-        )}
+        {errors?.message?.message && <span className='form-required'>{errors.message.message}</span>}
       </div>
 
       <div className='mb-10 mt-4'>
-        <Button type='red'>Send message</Button>
+        <Button variation='red'>Send message</Button>
       </div>
     </form>
   );

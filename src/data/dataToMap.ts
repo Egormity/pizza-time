@@ -6,4 +6,4 @@ export const menuFilters = ['pizzas', 'pasta', 'sushi', 'drinks'];
 
 export const pizzaSizes = ['small', 'medium', 'large', 'x-large'];
 
-export const menuSorting = ['Higher price', 'Lower price', 'With discout', 'With no discount'];
+export const menuSorting = ['Default', 'Higher price', 'Lower price', 'With discount'];

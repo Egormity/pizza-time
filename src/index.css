@@ -35,6 +35,13 @@
     transform: translate(-50%, -50%);
   }
 
+  .fixed-centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   /* FLEX */
   .flex-centered {
     display: flex;
@@ -151,6 +158,10 @@
 
   .form-required {
     animation: rollUp theme('transitionDuration.primary') ease-out forwards;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: theme('colors.primary-red');
   }
 
   .menu-grid {

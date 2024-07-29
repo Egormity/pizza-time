@@ -85,7 +85,7 @@ export default function MenuResults() {
               )}
               <h3 className='text-xl text-primary-yellow-light'> {formatCurrency(item.price)}</h3>
               <div className='ml-auto'>
-                <Button type='red'>Add to cart</Button>
+                <Button variation='red'>Add to cart</Button>
               </div>
             </div>
           </div>
