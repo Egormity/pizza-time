@@ -5,7 +5,7 @@ import LoginPopup from '../../Features/account/AccountPopup';
 
 export default function AppLoyaut() {
   return (
-    <div className='overflow-y-visible'>
+    <div className='overflow-x-hidden overflow-y-visible'>
       <Navbar />
 
       <main className='min-h-screen'>

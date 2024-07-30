@@ -1,10 +1,11 @@
-import BlogPosts from './BlogPosts';
 import Pagination from '../../ui/Pagination';
 import Spinner from '../../ui/Spinner';
 import { usePosts } from '../../hooks/usePosts';
+import { Post } from '../../utils/types';
+import PostPreview from '../../ui/PostPreview';
 
 export default function BlogSection() {
-  const { count, isLoadingPosts } = usePosts();
+  const { posts, count, isLoadingPosts } = usePosts();
 
   return (
     <section>
@@ -14,9 +15,21 @@ export default function BlogSection() {
         and pizza-making tips.
       </p>
 
-      <div className='blog-grid py-20'>{isLoadingPosts ? <Spinner /> : <BlogPosts />}</div>
+      <div className='py-20'>
+        {isLoadingPosts ? (
+          <Spinner />
+        ) : !posts ? (
+          <h1 className='text-4xl font-black'>Posts could not be loaded..</h1>
+        ) : (
+          <div className='blog-grid max400px:grid-cols-1'>
+            {posts.map((post: Post) => (
+              <PostPreview post={post} key={post.heading} />
+            ))}
+          </div>
+        )}
+      </div>
 
-      <div className='pb-12'>
+      <div>
         <Pagination count={count} />
       </div>
     </section>

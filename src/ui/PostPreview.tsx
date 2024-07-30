@@ -1,23 +1,18 @@
 import { useSearchParams } from 'react-router-dom';
+import { Post } from '../utils/types';
+import { formatDate } from '../utils/formatDate';
+import { scrollToTop } from '../utils/scrollToTop';
 
-import Spinner from '../../ui/Spinner';
-import { Post } from '../../utils/types';
-import { formatDate } from '../../utils/formatDate';
-import { usePosts } from '../../hooks/usePosts';
-
-export default function BlogPosts() {
-  const { posts, isLoadingPosts } = usePosts();
+export default function PostPreview({ post }: { post: Post }) {
   const [searchParams, setSearchParams] = useSearchParams();
-
-  if (isLoadingPosts) return <Spinner className='col-span-full row-span-full' />;
-  if (!posts) return <h1 className='text-4xl font-black'>Posts could not be loaded..</h1>;
 
   function handleClick(value: string) {
     searchParams.set('post', value);
     setSearchParams(searchParams);
+    scrollToTop();
   }
 
-  return posts.map((post: Post) => (
+  return (
     <div
       key={post.id}
       className='cursor-pointer space-y-4 overflow-hidden rounded-xl border border-zinc-800 text-left duration-primary hover:-translate-y-1 hover:bg-zinc-500 hover:bg-opacity-10'
@@ -40,5 +35,5 @@ export default function BlogPosts() {
         <p className='font-semibold text-zinc-200'>Read more..</p>
       </div>
     </div>
-  ));
+  );
 }

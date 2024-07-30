@@ -16,7 +16,9 @@ export default function MenuResults() {
   return (
     <div>
       <div className='menu-grid mb-8'>
-        <MenuItem menuItems={menuItems} />
+        {menuItems.map(menuItem => (
+          <MenuItem menuItem={menuItem} key={menuItem.name} />
+        ))}
       </div>
 
       <Pagination count={menuCount} />

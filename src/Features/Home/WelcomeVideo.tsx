@@ -1,9 +1,9 @@
 import Button from '../../ui/Button';
 import Overlay from '../../ui/Overlay';
 
-export default function WelcomeVideo() {
+export default function WelcomeVideo({ padding }: { padding?: string }) {
   return (
-    <section className='relative flex h-screen items-center justify-center'>
+    <section className={`${padding} relative flex h-screen items-center justify-center`}>
       <video autoPlay muted loop className='absolute left-0 top-0 h-full w-full object-cover'>
         <source src='home/hero-bg.mp4' type='video/mp4' />
       </video>

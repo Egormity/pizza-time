@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 
 import { ITEMS_PER_PAGE } from '../utils/constants';
 import { getMenuSection } from '../services/getMenuSection';
-import { menuSorting } from '../data/dataToMap';
 
 export function useMenuSection(select: string) {
   const [searchParams, setSearchParams] = useSearchParams();

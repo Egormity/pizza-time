@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { scrollToTop } from '../utils/scrollToTop';
 
 type ButtonProps = {
   children: ReactNode;
@@ -35,7 +36,10 @@ export default function Button({ children, htmlType, variation, to, customFunc, 
       disabled={disabled}
       className={className}
       onClick={() => {
-        if (to) navigate(to);
+        if (to) {
+          navigate(to);
+          scrollToTop();
+        }
         if (customFunc) customFunc();
       }}
     >

@@ -60,10 +60,20 @@ export type CartItem = {
   description?: string | null;
   price: number;
   discount: number;
-  type: string;
+  type: string | null;
+  pizzaSize: pizzaSizesTypes | null;
+  pizzaPrice: number | null;
 };
 
 export type CartType = {
   id: string;
   content: CartItem[];
+};
+
+export type getAnyTableProps = {
+  select: string;
+  orderColumn?: string;
+  orderAscendingDirection?: boolean;
+  from?: number;
+  to?: number;
 };

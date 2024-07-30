@@ -11,6 +11,11 @@ export default function NavButtons({ customFunc }: { customFunc: () => void }) {
   const { setIsLoginPopupOpenOpposite, user } = useUserContext();
   const { cartQuantity } = useCartContext();
 
+  function calculateQuantityWidth(quantity: number) {
+    const width = 6 + (quantity + '').length * 2;
+    return `w-${width}`;
+  }
+
   return (
     <>
       <li>
@@ -35,9 +40,11 @@ export default function NavButtons({ customFunc }: { customFunc: () => void }) {
             scrollToTop();
           }}
         >
-          <IoCartOutline />
+          <span className='text-xl'>
+            <IoCartOutline />
+          </span>
           <span>Cart</span>
-          <span>({cartQuantity})</span>
+          <span className={`${calculateQuantityWidth(cartQuantity)}`}>({cartQuantity})</span>
         </Button>
       </li>
     </>
