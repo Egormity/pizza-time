@@ -24,8 +24,7 @@
     "noFallthroughCasesInSwitch": true,
 
     //--- IGNORE ERRORS FOR DEPLOYING ---//
-    "skipDefaultLibCheck": true,
-    "ignoreBuildErrors": true
+    "skipDefaultLibCheck": true
   },
   "include": ["src"]
 }
