@@ -22,7 +22,7 @@ export default function SignUp({ setActiveMenu }: SignUpProps) {
       if (!localData) break;
 
       const user: UserType = JSON.parse(localData);
-      if (data.email === user.email) {
+      if (data.email === user?.email) {
         localStorage.removeItem(`user-${i}`);
       }
     }

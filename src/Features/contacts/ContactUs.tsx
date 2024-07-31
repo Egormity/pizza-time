@@ -12,7 +12,7 @@ export default function ContactUs() {
           </p>
         </div>
 
-        <div className='bg-contacts h-[22.5rem] w-[27.5rem] overflow-hidden rounded-2xl shadow-md ring-2 ring-primary-yellow-light duration-primary hover:shadow-primary-yellow hover:ring-primary-yellow max1000px:row-start-1 max1000px:row-end-2 max1000px:w-full min1000px:-translate-y-36 min1000px:justify-self-end' />
+        <div className='h-[22.5rem] w-[27.5rem] overflow-hidden rounded-2xl bg-cover bg-center shadow-md ring-2 ring-primary-yellow-light duration-primary [background-image:url(images-row/img-1.webp)] hover:shadow-primary-yellow hover:ring-primary-yellow max1000px:row-start-1 max1000px:row-end-2 max1000px:w-full min1000px:-translate-y-36 min1000px:justify-self-end' />
       </div>
     </section>
   );

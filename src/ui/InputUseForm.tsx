@@ -1,13 +1,13 @@
-import { UseFormRegister } from 'react-hook-form';
+// import { UseFormRegister, FieldErrors } from 'react-hook-form';
 import { inputStyle } from '../utils/classNames';
 
 type InputUseFormProps = {
   type?: 'input' | 'textarea';
   inputName: string;
   placeHolder: string;
-  errors: FieldErrors<SubmitEvent>;
+  errors: object;
   registerOptions: object;
-  registerFunc: UseFormRegister<SubmitEvent>;
+  registerFunc: unknown;
   inputType: string;
   label?: string;
   defaultValue?: string;
@@ -24,6 +24,7 @@ export default function InputUseForm({
   label,
   defaultValue,
 }: InputUseFormProps) {
+  // @ts-expect-error - REACT HOOK FORM TYPES GIVE ERRORS IN VS CODE
   const message = errors[inputName]?.message;
 
   if (type === 'input')
@@ -43,6 +44,7 @@ export default function InputUseForm({
             placeholder={placeHolder}
             type={inputType}
             id={inputName}
+            // @ts-expect-error - REACT HOOK FORM TYPES GIVE ERRORS IN VS CODE
             {...registerFunc(inputName, registerOptions)}
           />
         </div>
@@ -65,6 +67,7 @@ export default function InputUseForm({
             className={`${inputStyle} w-full`}
             placeholder={placeHolder}
             id={inputName}
+            // @ts-expect-error - REACT HOOK FORM TYPES GIVE ERRORS IN VS CODE
             {...registerFunc(inputName, registerOptions)}
           />
         </div>

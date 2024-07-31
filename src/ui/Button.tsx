@@ -37,7 +37,7 @@ export default function Button({ children, htmlType, variation, to, customFunc, 
       className={className}
       onClick={() => {
         if (to) {
-          navigate(to);
+          to === -1 ? navigate(-1) : navigate(to);
           scrollToTop();
         }
         if (customFunc) customFunc();
