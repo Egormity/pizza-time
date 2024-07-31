@@ -6,7 +6,7 @@ export default {
       fontFamily: {
         default: ["Poppins", "sans-serif"],
         cursive: ["Nothing You Could Do", "sans-serif"],
-        pizza: ["Playwrite HU", "sans-serif"],
+        pizza: ["Dosis", "sans-serif"],
       },
 
       fontSize: {

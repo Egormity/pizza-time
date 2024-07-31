@@ -27,7 +27,8 @@ export default function NavButtons({ customFunc }: { customFunc: () => void }) {
             !user && setIsLoginPopupOpenOpposite();
           }}
         >
-          Account <span className='text-2xl'>{user ? <RiUserFollowLine /> : <RiUserUnfollowLine />}</span>
+          <span>{user ? user.fullName : 'Account'}</span>
+          <span className='text-2xl'>{user ? <RiUserFollowLine /> : <RiUserUnfollowLine />}</span>
         </Button>
       </li>
 
