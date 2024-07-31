@@ -9,7 +9,7 @@ export default function Stats({ margin }: { margin?: string }) {
       <Overlay bgColor='bg-zinc-400' bgOpacity='bg-opacity-25' backdropBlur='backdrop-blur-sm' />
 
       <div
-        className={`${maxWidthPage} relative z-20 grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-x-10 gap-y-8 py-8`}
+        className={`max-width-page relative z-20 grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-x-10 gap-y-8 py-8`}
       >
         <div className='grid justify-items-center gap-8 text-center'>
           <span className='border-2 border-primary-yellow-light p-2 text-6xl'>

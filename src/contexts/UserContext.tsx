@@ -14,7 +14,9 @@ const UserContext = createContext<UserContextProps>(null);
 
 function UserContextProvider({ children }: { children: ReactNode }) {
   const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('active-user')) || null);
+
+  const localData = localStorage.getItem('active-user');
+  const [user, setUser] = useState(localData ? JSON.parse(localData) : null);
 
   function setIsLoginPopupOpenOpposite() {
     setIsLoginPopupOpen(s => !s);

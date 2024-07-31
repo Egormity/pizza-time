@@ -2,21 +2,17 @@ import { ReactNode, useRef } from 'react';
 
 type PerspectiveHoverContainerProps = {
   children: ReactNode;
-  perspectiveSize?: string;
-  perspectiveScale?: string;
-  rotationRation?: number;
+  rotationRatio?: number;
 };
 
 export default function PerspectiveHoverContainer({
   children,
-  perspectiveSize = '750px',
-  perspectiveScale = '1.1',
-  rotationRation = 1,
+  rotationRatio = 1,
 }: PerspectiveHoverContainerProps) {
   const boundingRef = useRef<DOMRect | null>(null);
 
-  const pespectiveContainerStyle = `[perspective:${perspectiveSize}]`;
-  const perspectiveStyle = `hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(${perspectiveScale})]`;
+  const pespectiveContainerStyle = `[perspective:750px]`;
+  const perspectiveStyle = `hover:[transform:rotateX(var(--x-rotation))_rotateY(var(--y-rotation))_scale(1.05)]`;
 
   return (
     <div className={pespectiveContainerStyle}>
@@ -32,7 +28,7 @@ export default function PerspectiveHoverContainer({
           const y = ev.clientY - boundingRef.current.top;
           const xPercentage = x / boundingRef.current.width;
           const yPercentage = y / boundingRef.current.height;
-          const xRotation = (xPercentage - 0.5) * 20 * rotationRation;
+          const xRotation = (xPercentage - 0.5) * 20 * rotationRatio;
           const yRotation = (0.5 - yPercentage) * 20;
 
           ev.currentTarget.style.setProperty('--x-rotation', `${yRotation.toFixed(3)}deg`);

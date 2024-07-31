@@ -1,14 +1,13 @@
 import AboutArticle from '../../ui/AboutArticle';
 import Overlay from '../../ui/Overlay';
-import { maxWidthPage } from '../../utils/classNames';
 
 export default function AboutSection3() {
   return (
-    <section className='border-primary-red-dark bg-about-2 relative border-b'>
+    <section className='relative border-b border-primary-red-dark bg-cover bg-center [background-image:url(about/section-2.jpeg)]'>
       <Overlay />
 
       <div className='max-w-medium mx-auto'>
-        <div className={`${maxWidthPage} py-8`}>
+        <div className={`max-width-page py-8`}>
           <AboutArticle cursive='DEDICATED' heading='Changing the world together' className='relative z-20'>
             We believe that our success is due to our commitment to providing high-quality food and
             exceptional service. Our menu features a wide range of delicious pizzas, salads, sandwiches, pasta

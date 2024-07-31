@@ -15,7 +15,7 @@ export default function RecentFromBlog({ padding }: { padding?: string }) {
   });
 
   return (
-    <section className={`${maxWidthPage} ${padding} grid gap-10`}>
+    <section className={`max-width-page ${padding} grid gap-10`}>
       <div className='text-center'>
         <h1 className='text-4xl'>RECENT FROM BLOG</h1>
         <p className='max-width-text text-zinc-400'>

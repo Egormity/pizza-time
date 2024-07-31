@@ -5,7 +5,7 @@ import { formatCurrency } from '../../utils/formatCurrency';
 
 export default function PizzaMealsSection({ padding }: { padding?: string }) {
   return (
-    <section className={`${maxWidthPage} ${padding} grid gap-8`}>
+    <section className={`max-width-page ${padding} grid gap-8`}>
       <div className='grid gap-2 text-center'>
         <h1 className='text-4xl'>HOT PIZZA MEALS</h1>
         <p className='mx-auto max-w-[60rem]'>

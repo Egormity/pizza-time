@@ -17,7 +17,7 @@ export default function AboutPage() {
 
       <AboutSection2 />
 
-      <div className={`${maxWidthPage} pt-8`}>
+      <div className={`max-width-page pt-8`}>
         <ThreeImagesRow />
       </div>
 

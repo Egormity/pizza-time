@@ -1,6 +1,5 @@
 import { useForm } from 'react-hook-form';
 import Button from '../../ui/Button';
-import { inputStyle } from '../../utils/classNames';
 import { AccountLogInOptions, UserType } from '../../utils/types';
 import { getNewUserIndex } from '../../utils/getNewUserIndex';
 import toast from 'react-hot-toast';
@@ -19,16 +18,18 @@ type onSubmitProps = {
 export default function LogIn({ setActiveMenu }: LogInProps) {
   const { setUser, setIsLoginPopupOpen } = useUserContext();
 
-  const { register, formState, getValues, handleSubmit, reset } = useForm();
+  const { register, formState, handleSubmit, reset } = useForm();
   const { errors } = formState;
 
   function onSubmit(data: onSubmitProps) {
     let loginUser = null;
 
     for (let i = 0; i < getNewUserIndex(); i++) {
-      const user: UserType = JSON.parse(localStorage.getItem(`user-${i}`));
+      const localData = localStorage.getItem(`user-${i}`);
+      if (!localData) break;
 
-      if (!user) break;
+      const user: UserType = JSON.parse(localData);
+
       if (!user.fullName) continue;
 
       if (data.logInEmail === user.email && data.logInPassword === user.password) {

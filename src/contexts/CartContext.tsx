@@ -7,7 +7,7 @@ type CartContextProps = null | {
   cart: CartType;
   setCart: (value: CartItem) => void;
 
-  handleAddNewItemToCart: (newItem: MenuCategoryItem, pizzaSize?: pizzaSizesTypes) => void;
+  handleAddNewItemToCart: (menuItem: MenuCategoryItem, pizzaSize: pizzaSizesTypes | null) => void;
   handleRemoveItemFromCart: (removeItem: CartItem) => void;
   handleAddExistingItemToCart: (addItem: CartItem) => void;
 
@@ -23,30 +23,32 @@ const CartContext = createContext<CartContextProps>(null);
 function CartContextProvider({ children }: { children: ReactNode }) {
   const { user } = useUserContext();
 
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem(`cart-${user?.id}`)) || { id: user?.id, content: [] },
-  );
+  const localData = localStorage.getItem(`cart-${user?.id}`);
+  const [cart, setCart] = useState(localData ? JSON.parse(localData) : { id: user?.id, content: [] });
+
   function updateCartLocalStorage() {
     if (user) localStorage.setItem(`cart-${user?.id}`, JSON.stringify(cart));
   }
   updateCartLocalStorage();
 
   const cartQuantity = cart.content
-    ? cart.content.reduce((cur: CartItem, acc: number) => acc.quantity + cur, 0)
+    ? cart.content.reduce((cur: number, acc: CartItem) => acc.quantity + cur, 0)
     : 0;
 
   const cartTotalPrice = cart.content
-    ? cart.content.reduce((cur: CartItem, acc: number) => acc.totalPrice + cur, 0)
+    ? cart.content.reduce((cur: number, acc: CartItem) => acc.totalPrice + cur, 0)
     : 0;
 
   function handleAddNewItemToCart(menuItem: MenuCategoryItem, pizzaSize: pizzaSizesTypes | null) {
-    const pizzaPrice = menuItem.price + calculatePizzaSizePrice(menuItem.price, pizzaSize);
+    let pizzaPrice = null;
+    if (menuItem.price && pizzaSize)
+      pizzaPrice = menuItem.price + calculatePizzaSizePrice(menuItem.price, pizzaSize);
 
     const newCartItem: CartItem = {
       quantity: 1,
       price: menuItem.price,
       pizzaPrice: pizzaSize ? pizzaPrice : null,
-      totalPrice: !pizzaSize ? menuItem.price - menuItem.discount : pizzaPrice - menuItem.discount,
+      totalPrice: pizzaPrice ? pizzaPrice - menuItem.discount : menuItem.price - menuItem.discount,
       totalDiscount: menuItem.discount,
       discount: menuItem.discount,
       itemId: menuItem.id,

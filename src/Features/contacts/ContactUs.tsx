@@ -3,7 +3,7 @@ import { maxWidthPage } from '../../utils/classNames';
 export default function ContactUs() {
   return (
     <section className='bg-primary-yellow-light'>
-      <div className={`${maxWidthPage} grid grid-cols-2 gap-8 pb-32 pt-10 max1000px:grid-cols-1`}>
+      <div className={`max-width-page grid grid-cols-2 gap-8 pb-32 pt-10 max1000px:grid-cols-1`}>
         <div>
           <h1 className='text-6xl font-black'>Contact us</h1>
           <p className='mt-4 max-w-[30rem]'>

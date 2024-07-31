@@ -1,13 +1,12 @@
 import AboutArticle from '../../ui/AboutArticle';
 import Overlay from '../../ui/Overlay';
-import { maxWidthPage } from '../../utils/classNames';
 
 export default function AboutSection1() {
   return (
-    <section className='bg-about-1 border-primary-red-dark relative border-b'>
+    <section className='relative border-b border-primary-red-dark bg-cover bg-center [background-image:url(about/section-1.jpeg)]'>
       <Overlay />
 
-      <div className={`${maxWidthPage} pb-12 pt-32`}>
+      <div className={`max-width-page pb-12 pt-32`}>
         <AboutArticle cursive='ABOUT US' heading='More than delicious food' className='relative z-20'>
           Founded in 1982 we bring pizza slice by slice to the next level! Unique branding and being in the
           pizza industry is the formula to our success. We do understand what people want and convert desires

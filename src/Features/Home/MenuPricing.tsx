@@ -12,7 +12,7 @@ export default function MenuPricing({ padding }: { padding?: string }) {
   const navigate = useNavigate();
 
   return (
-    <section className={`${maxWidthPage} ${padding} grid gap-8`}>
+    <section className={`max-width-page ${padding} grid gap-8`}>
       <div className='grid gap-2 text-center'>
         <h1 className='text-4xl'>MENU PRICING</h1>
         <p className='max-width-text text-zinc-400'>

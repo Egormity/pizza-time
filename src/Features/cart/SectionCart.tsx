@@ -12,7 +12,7 @@ export default function SectionCart() {
 
   if (!user)
     return (
-      <div className={`${maxWidthPage} grid justify-items-center gap-10 text-center text-lg`}>
+      <div className={`max-width-page grid justify-items-center gap-10 text-center text-lg`}>
         <h1 className='text-5xl font-black'>Shopping cart</h1>
         <h1 className='text-3xl font-bold text-primary-yellow-light'>
           Please, log in or create an account to continue
@@ -28,7 +28,7 @@ export default function SectionCart() {
     );
 
   return (
-    <div className={`${maxWidthPage} grid justify-items-center gap-10`}>
+    <div className={`max-width-page grid justify-items-center gap-10`}>
       <h1 className='text-center text-5xl font-black'>Shopping cart</h1>
 
       {cart.content.length === 0 ? (

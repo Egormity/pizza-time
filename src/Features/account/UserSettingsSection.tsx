@@ -40,7 +40,7 @@ export default function UserSettingsSection() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={`${maxWidthPage} grid max-w-[40rem] gap-8`}>
+    <form onSubmit={handleSubmit(onSubmit)} className={`max-width-page grid max-w-[40rem] gap-8`}>
       <InputUseForm
         label='Name:'
         defaultValue={user?.fullName}

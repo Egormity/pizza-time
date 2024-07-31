@@ -3,7 +3,7 @@ import Service from './Service';
 
 export default function HomeServices({ padding }: { padding?: string }) {
   return (
-    <section className={`${maxWidthPage} ${padding} grid gap-10 bg-zinc-900 text-center`}>
+    <section className={`max-width-page ${padding} grid gap-10 bg-zinc-900 text-center`}>
       <h1 className='text-4xl'>OUR SERVICES</h1>
 
       <p className='mx-auto max-w-[60rem] text-zinc-300'>

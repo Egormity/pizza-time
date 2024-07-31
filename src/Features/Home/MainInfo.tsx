@@ -2,9 +2,7 @@ import { maxWidthPageMedium } from '../../utils/classNames';
 
 export default function MainInfo({ padding }: { padding?: string }) {
   return (
-    <section
-      className={`${maxWidthPageMedium} ${padding} grid grid-cols-[4fr_3fr] gap-10 max500px:grid-cols-1`}
-    >
+    <section className={`max-width-medium ${padding} grid grid-cols-[4fr_3fr] gap-10 max500px:grid-cols-1`}>
       <div className='grid gap-6'>
         <div>
           <h2 className='text-2xl'>8 (800) 555 35-35</h2>

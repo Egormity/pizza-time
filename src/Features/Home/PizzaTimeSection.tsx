@@ -6,7 +6,7 @@ export default function PizzaTimeSection({ padding }: { padding?: string }) {
 
   return (
     <section
-      className={`${maxWidthPage} ${padding} grid gap-8 min1100px:grid-cols-[22.5vw_1fr_22.5vw] min1100px:px-0 min1400px:grid-cols-[1fr_37.5rem_1fr]`}
+      className={`max-width-page ${padding} grid gap-8 min1100px:grid-cols-[22.5vw_1fr_22.5vw] min1100px:px-0 min1400px:grid-cols-[1fr_37.5rem_1fr]`}
     >
       {screenWidth > 1100 && (
         <div className='flex max-h-[17.5rem] items-center justify-center opacity-75'>

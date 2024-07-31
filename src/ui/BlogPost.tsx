@@ -25,9 +25,7 @@ export default function BlogPost() {
   const post: Post = posts[0];
 
   return (
-    <article
-      className={`${maxWidthPage} padding-page-t padding-page-b grid justify-items-center gap-8 pb-14`}
-    >
+    <article className={`max-width-page padding-page-t padding-page-b grid justify-items-center gap-8 pb-14`}>
       <h1 className='max-w-[40rem] text-4xl font-black'>{post.heading}</h1>
 
       <div className='-mt-4 flex gap-6 text-zinc-300'>

@@ -10,12 +10,7 @@ export default function CartItem({ item }: { item: CartItem }) {
   const { handleRemoveItemFromCart, handleAddExistingItemToCart } = useCartContext();
 
   return (
-    <PerspectiveHoverContainer
-      perspectiveSize='2000px'
-      perspectiveScale='1.05'
-      rotationRation={0.5}
-      key={item.name}
-    >
+    <PerspectiveHoverContainer rotationRatio={0.5} key={item.name}>
       <div className='grid max-w-[45rem] grid-cols-2 overflow-hidden rounded-xl border border-zinc-700 bg-zinc-800 bg-opacity-5 max500px:grid-cols-1'>
         <div className='flex items-center justify-center'>
           <img src={item.image} alt={item.name} className='min-h-full min-w-full object-cover' />

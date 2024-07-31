@@ -5,9 +5,7 @@ const grayText = `font-light text-zinc-400`;
 
 export default function MapAndContacts({ padding }: { padding?: string }) {
   return (
-    <section
-      className={`${padding} ${maxWidthPage} grid grid-cols-2 gap-x-20 gap-y-10 max1000px:grid-cols-1`}
-    >
+    <section className={`${padding} max-width-page grid grid-cols-2 gap-x-20 gap-y-10 max1000px:grid-cols-1`}>
       <Map className='h-full w-full max1000px:h-[32.5rem]' />
 
       <div className='grid gap-4 max1000px:row-start-1'>
