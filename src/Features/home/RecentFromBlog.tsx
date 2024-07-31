@@ -1,6 +1,7 @@
 import { useAnyTable } from '../../hooks/useAnyTable';
 import Button from '../../ui/Button';
 import NoDataFound from '../../ui/NoDataFound';
+import PerspectiveHoverContainer from '../../ui/PerspectiveHoverContainer';
 import PostPreview from '../../ui/PostPreview';
 import Spinner from '../../ui/Spinner';
 import { Post } from '../../utils/types';
@@ -31,7 +32,9 @@ export default function RecentFromBlog({ padding }: { padding?: string }) {
       ) : (
         <div className='grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-8 max400px:grid-cols-1'>
           {data.map((post: Post) => (
-            <PostPreview post={post} key={post.heading} />
+            <PerspectiveHoverContainer key={post.heading}>
+              <PostPreview post={post} />
+            </PerspectiveHoverContainer>
           ))}
         </div>
       )}

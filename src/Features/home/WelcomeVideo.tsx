@@ -1,10 +1,21 @@
+import { useRef } from 'react';
+
 import Button from '../../ui/Button';
 import Overlay from '../../ui/Overlay';
 
 export default function WelcomeVideo({ padding }: { padding?: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
   return (
     <section className={`${padding} relative flex h-screen items-center justify-center`}>
-      <video autoPlay muted loop className='absolute left-0 top-0 h-full w-full object-cover'>
+      <video
+        autoPlay
+        muted
+        loop
+        className='absolute left-0 top-0 h-full w-full object-cover'
+        ref={videoRef}
+        onCanPlay={() => (videoRef.current ? (videoRef.current.playbackRate = 1) : null)}
+      >
         <source src='/home/hero-bg.mp4' type='video/mp4' />
       </video>
       <Overlay />
