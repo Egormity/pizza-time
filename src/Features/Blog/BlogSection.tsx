@@ -21,7 +21,7 @@ export default function BlogSection() {
         ) : !posts ? (
           <h1 className='text-4xl font-black'>Posts could not be loaded..</h1>
         ) : (
-          <div className='blog-grid max400px:grid-cols-1'>
+          <div className='grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-8 max400px:grid-cols-1 min1200px:grid-cols-3'>
             {posts.map((post: Post) => (
               <PostPreview post={post} key={post.heading} />
             ))}

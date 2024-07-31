@@ -3,7 +3,7 @@ import NoDataFound from './NoDataFound';
 import Spinner from './Spinner';
 
 type GenerateFooterPageContentProps = {
-  items: FooterPageContentProps[];
+  items: FooterPageContentProps[] | undefined;
   isLoading: boolean;
   notFound: string;
 };

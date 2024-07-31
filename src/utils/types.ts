@@ -44,10 +44,10 @@ export type UserType = {
   email: string;
   password: string;
   id: string;
-};
+} | null;
 
 export type SignUpUser = UserType & {
-  passwordConfirm: string;
+  passwordConfirm?: string;
 };
 
 export type CartItem = {

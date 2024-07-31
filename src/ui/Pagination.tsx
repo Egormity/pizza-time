@@ -4,12 +4,20 @@ import Button from './Button';
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi';
 import SpinnerMini from './SpinnerMini';
 import { scrollToTop } from '../utils/scrollToTop';
-import { useLayoutEffect } from 'react';
 
-export default function Pagination({ count }: { count: number }) {
+export default function Pagination({ count }: { count: number | undefined }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const currentPage = +searchParams.get('page') || 1;
+  const localData = searchParams.get('page');
+  const currentPage = localData ? +localData : 1;
+
+  if (!count)
+    return (
+      <div className='flex h-full w-full items-center justify-center'>
+        <SpinnerMini />
+      </div>
+    );
+
   const pageCount = Math.ceil(count / ITEMS_PER_PAGE);
 
   function prevPage() {

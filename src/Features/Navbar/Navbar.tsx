@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className='padding-page-x fixed z-50 w-screen border-b border-zinc-800 bg-zinc-900 py-2 pr-10 shadow-lg min1200px:pr-16'>
-      <ul className='max-width-page mx-auto flex items-center gap-6 text-lg max1000px:gap-5'>
+      <ul className='max-width-page flex items-center gap-6 text-lg max1000px:gap-5'>
         <li className='mr-auto'>
           <Link to='HomePage' className='flex cursor-pointer items-center gap-3' onClick={scrollToTop}>
             <img src='global/logo.png' className='h-16' />
@@ -26,7 +26,7 @@ export default function Navbar() {
           </Link>
         </li>
 
-        {screenWidth > 925 ? (
+        {screenWidth > 950 ? (
           <>
             <GenerateNavLinks linkNames={navLinkNames} />
             <NavButtons customFunc={() => setIsMenuOpen(false)} />

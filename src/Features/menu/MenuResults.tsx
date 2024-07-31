@@ -15,7 +15,7 @@ export default function MenuResults() {
 
   return (
     <div>
-      <div className='menu-grid mb-8'>
+      <div className='min1900px:grid-col-3 mb-8 grid grid-cols-[repeat(auto-fit,minmax(17.5rem,1fr))] gap-8 max400px:grid-cols-1'>
         {menuItems.map(menuItem => (
           <MenuItem menuItem={menuItem} key={menuItem.name} />
         ))}

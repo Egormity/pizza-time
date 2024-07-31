@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import Button from '../../ui/Button';
 import { AccountLogInOptions, UserType } from '../../utils/types';
 import { getNewUserIndex } from '../../utils/getNewUserIndex';
@@ -18,10 +18,10 @@ type onSubmitProps = {
 export default function LogIn({ setActiveMenu }: LogInProps) {
   const { setUser, setIsLoginPopupOpen } = useUserContext();
 
-  const { register, formState, handleSubmit, reset } = useForm();
+  const { register, formState, handleSubmit, reset } = useForm<onSubmitProps>();
   const { errors } = formState;
 
-  function onSubmit(data: onSubmitProps) {
+  const onSubmit: SubmitHandler<onSubmitProps> = data => {
     let loginUser = null;
 
     for (let i = 0; i < getNewUserIndex(); i++) {
@@ -39,7 +39,7 @@ export default function LogIn({ setActiveMenu }: LogInProps) {
     }
 
     if (!loginUser) {
-      toast.error('User with provide credentials not found');
+      toast.error('User with providen credentials not found');
       return;
     }
 
@@ -47,7 +47,7 @@ export default function LogIn({ setActiveMenu }: LogInProps) {
     localStorage.setItem('active-user', JSON.stringify(loginUser));
     setIsLoginPopupOpen(false);
     toast.success('Successfully loged in');
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='grid gap-8'>

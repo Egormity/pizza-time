@@ -1,5 +1,3 @@
-import { maxWidthPage } from '../../utils/classNames';
-
 export default function ContactUs() {
   return (
     <section className='bg-primary-yellow-light'>

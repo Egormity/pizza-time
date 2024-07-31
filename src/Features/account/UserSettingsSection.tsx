@@ -1,9 +1,9 @@
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
+
 import { useUserContext } from '../../contexts/UserContext';
 import InputUseForm from '../../ui/InputUseForm';
-import { maxWidthPage } from '../../utils/classNames';
 import Button from '../../ui/Button';
-import toast from 'react-hot-toast';
 import { UserType } from '../../utils/types';
 import { getNewUserIndex } from '../../utils/getNewUserIndex';
 
@@ -16,20 +16,23 @@ export type NewUserType = {
 
 export default function UserSettingsSection() {
   const { user, setUser } = useUserContext();
-  const { register, formState, getValues, handleSubmit, reset } = useForm();
+  const { register, formState, getValues, handleSubmit, reset } = useForm<NewUserType>();
   const { errors } = formState;
 
-  function onSubmit(data: NewUserType) {
+  const onSubmit: SubmitHandler<NewUserType> = data => {
     const newUser: UserType = {
+      id: getNewUserIndex() + '',
       fullName: data.settingsName,
       email: data.settingsEmail,
       password: data.settingsPassword,
     };
 
     for (let i = 0; i < getNewUserIndex(); i++) {
-      const user: UserType = JSON.parse(localStorage.getItem(`user-${i}`));
-      if (newUser.email === user.email) {
-        // localStorage.removeItem(`user-${i}`);
+      const localData = localStorage.getItem(`user-${i}`);
+      if (!localData) break;
+      const user: UserType = JSON.parse(localData);
+
+      if (newUser.email === user?.email) {
         localStorage.setItem(`user-${i}`, JSON.stringify(newUser));
       }
     }
@@ -37,7 +40,7 @@ export default function UserSettingsSection() {
     localStorage.setItem('active-user', JSON.stringify(newUser));
 
     toast.success('Settings successfully changed');
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={`max-width-page grid max-w-[40rem] gap-8`}>
@@ -93,7 +96,7 @@ export default function UserSettingsSection() {
         registerOptions={{
           required: 'This field is required',
           minLength: { value: 8, message: 'Password should be at least 8 characters' },
-          validate: value => value === getValues().settingsPassword || 'Passwords need to match',
+          validate: (value: string) => value === getValues().settingsPassword || 'Passwords need to match',
         }}
       />
 

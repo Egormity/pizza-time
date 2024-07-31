@@ -6,7 +6,7 @@ type UserContextProps = null | {
   setIsLoginPopupOpen: (value: boolean) => void;
   setIsLoginPopupOpenOpposite: () => void;
 
-  user: UserType | null;
+  user: UserType;
   setUser: (value: UserType) => void;
 };
 

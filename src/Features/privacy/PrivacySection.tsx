@@ -6,7 +6,7 @@ export default function PrivacySection() {
   const { footerPageContent, isLoadingFooterPageContent } = useFooterPageContent('privacy');
 
   return (
-    <FooterPageLoyaut heading='Careers'>
+    <FooterPageLoyaut heading='Privacy'>
       <p className='mt-4 text-zinc-400'>
         This Privacy Policy ("Policy") outlines how Pizza Time ("Pizza Time," "we," "our," or "us") collects,
         uses, and protects your personal information when you use our Instagram growth services. By using our

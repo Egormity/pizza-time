@@ -94,6 +94,16 @@
     color: theme('colors.primary-red');
   }
 
+  .padding-page-x {
+    padding-left: theme(padding.4);
+    padding-right: theme(padding.4);
+
+    @media only screen and (max-width: 1200px) {
+      padding-left: theme(padding.4);
+      padding-right: theme(padding.4);
+    }
+  }
+
   .padding-page-t {
     padding-top: theme(padding.28);
   }
@@ -104,7 +114,8 @@
 
   .max-width-page {
     max-width: 87.5%;
-    padding: 0 3rem;
+    padding-left: theme(padding.12);
+    padding-right: theme(padding.12);
 
     margin-left: auto;
     margin-right: auto;
@@ -115,7 +126,8 @@
 
     @media only screen and (max-width: 1200px) {
       max-width: 95vw;
-      padding: 0 1rem;
+      padding-left: theme(padding.4);
+      padding-right: theme(padding.4);
     }
 
     @media only screen and (max-width: 900px) {
@@ -127,6 +139,14 @@
     max-width: 65vw;
     margin-left: auto;
     margin-right: auto;
+
+    padding-left: theme(padding.4);
+    padding-right: theme(padding.4);
+
+    @media only screen and (max-width: 1200px) {
+      padding-left: theme(padding.4);
+      padding-right: theme(padding.4);
+    }
 
     @media only screen and (max-width: 1000px) {
       max-width: 85vw;

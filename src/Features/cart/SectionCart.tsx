@@ -1,7 +1,6 @@
 import { useCartContext } from '../../contexts/CartContext';
 import { useUserContext } from '../../contexts/UserContext';
 import Button from '../../ui/Button';
-import { maxWidthPage } from '../../utils/classNames';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { scrollToTop } from '../../utils/scrollToTop';
 import CartItem from './CartItem';

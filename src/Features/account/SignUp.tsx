@@ -1,4 +1,4 @@
-import { useForm } from 'react-hook-form';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 
 import { AccountLogInOptions, SignUpUser, UserType } from '../../utils/types';
@@ -12,13 +12,16 @@ type SignUpProps = {
 };
 
 export default function SignUp({ setActiveMenu }: SignUpProps) {
-  const { register, formState, getValues, handleSubmit, reset } = useForm();
+  const { register, formState, getValues, handleSubmit, reset } = useForm<SignUpUser>();
   const { errors } = formState;
   const { screenHeight } = useScreenSize();
 
-  function onSubmit(data: SignUpUser) {
+  const onSubmit: SubmitHandler<SignUpUser> = data => {
     for (let i = 0; i < getNewUserIndex(); i++) {
-      const user: UserType = JSON.parse(localStorage.getItem(`user-${i}`));
+      const localData = localStorage.getItem(`user-${i}`);
+      if (!localData) break;
+
+      const user: UserType = JSON.parse(localData);
       if (data.email === user.email) {
         localStorage.removeItem(`user-${i}`);
       }
@@ -33,7 +36,7 @@ export default function SignUp({ setActiveMenu }: SignUpProps) {
     reset();
     toast.success('Account successfully created');
     setActiveMenu('logIn');
-  }
+  };
 
   return (
     <form
@@ -82,7 +85,7 @@ export default function SignUp({ setActiveMenu }: SignUpProps) {
         registerOptions={{
           required: 'This field is required',
           minLength: { value: 8, message: 'Password should be at least 8 characters' },
-          validate: value => value === getValues().password || 'Passwords need to match',
+          validate: (value: string) => value === getValues().password || 'Passwords need to match',
         }}
       />
 
