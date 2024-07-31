@@ -11,11 +11,19 @@ export default function MenuResults() {
   const { menuItems, isLoadingMenu, menuCount } = useMenuSection(searchParams.get('menu') || 'pizzas');
 
   if (isLoadingMenu) return <Spinner />;
-  if (!menuItems) return <NoDataFound dataName={searchParams.get('menu') || 'pizzas'} />;
+
+  if (!menuItems || !menuCount) {
+    return <NoDataFound dataName={searchParams.get('search') || searchParams.get('menu') || 'pizzas'} />;
+  }
+
+  function determineGridClos() {
+    if (menuCount === 1) return 'grid-cols-3';
+    return 'grid-cols-[repeat(auto-fit,minmax(17.5rem,1fr))]';
+  }
 
   return (
     <div>
-      <div className='min1900px:grid-col-3 mb-8 grid grid-cols-[repeat(auto-fit,minmax(17.5rem,1fr))] gap-8 max400px:grid-cols-1'>
+      <div className={`${determineGridClos()} mb-8 grid gap-8 max400px:grid-cols-1 min1800px:grid-cols-3`}>
         {menuItems.map(menuItem => (
           <MenuItem menuItem={menuItem} key={menuItem.name} />
         ))}

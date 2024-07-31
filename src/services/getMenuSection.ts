@@ -6,10 +6,14 @@ type getMenuSectionProps = {
   select: MenuFiltersTypes;
   page: number;
   sortBy: MenuSortingTypes;
+  search: string | null;
 };
 
-export async function getMenuSection({ select, page, sortBy }: getMenuSectionProps) {
+export async function getMenuSection({ select, page, sortBy, search }: getMenuSectionProps) {
   let query = supabase.from(select).select('*', { count: 'exact' });
+
+  //--- SEARCHING ---//
+  if (search) query = query.textSearch('name', search, { type: 'plain', config: 'english' });
 
   //--- SORTING ---//
   if (sortBy && sortBy.toLowerCase() !== 'default') {
