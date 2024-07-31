@@ -5,7 +5,7 @@ export default function WelcomeVideo({ padding }: { padding?: string }) {
   return (
     <section className={`${padding} relative flex h-screen items-center justify-center`}>
       <video autoPlay muted loop className='absolute left-0 top-0 h-full w-full object-cover'>
-        <source src='home/hero-bg.mp4' type='video/mp4' />
+        <source src='/home/hero-bg.mp4' type='video/mp4' />
       </video>
       <Overlay />
 

@@ -3,7 +3,7 @@ import Overlay from '../../ui/Overlay';
 
 export default function AboutSection3() {
   return (
-    <section className='relative border-b border-primary-red-dark bg-cover bg-center [background-image:url(about/section-2.jpeg)]'>
+    <section className='relative border-b border-primary-red-dark bg-cover bg-center [background-image:url(/about/section-2.jpeg)]'>
       <Overlay />
 
       <div className='max-w-medium mx-auto'>

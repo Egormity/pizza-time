@@ -4,7 +4,7 @@ import Overlay from '../../ui/Overlay';
 
 export default function Stats({ margin }: { margin?: string }) {
   return (
-    <section className={`${margin} relative bg-cover bg-center [background-image:url('home/stats.jpeg')]`}>
+    <section className={`${margin} relative bg-cover bg-center [background-image:url('/home/stats.jpeg')]`}>
       <Overlay bgColor='bg-zinc-400' bgOpacity='bg-opacity-25' backdropBlur='backdrop-blur-sm' />
 
       <div
