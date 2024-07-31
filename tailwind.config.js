@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        default: ["Poppins", "sans-serif"],
-        cursive: ["Nothing You Could Do", "sans-serif"],
-        pizza: ["Dosis", "sans-serif"],
+        default: ["Poppins", "Verdana", "sans-serif"],
+        cursive: ["Nothing You Could Do", "Times New Roman", "sans-serif"],
+        pizza: ["Georgia", "Trebuchet MS", "sans-serif"],
       },
 
       fontSize: {

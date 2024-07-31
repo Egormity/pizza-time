@@ -20,8 +20,8 @@ export default function Navbar() {
         <li className='mr-auto'>
           <Link to='HomePage' className='flex cursor-pointer items-center gap-3' onClick={scrollToTop}>
             <img src='global/logo.png' className='h-16' />
-            <h3 className='font-pizza text-lg font-semibold tracking-widest'>
-              Pizza <br /> <span className='text-primary-yellow'>Time</span>
+            <h3 className='font-pizza text-xl font-bold tracking-widest'>
+              Pizza <br /> <span className='text-primary-yellow-light'>Time</span>
             </h3>
           </Link>
         </li>
