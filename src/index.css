@@ -162,41 +162,38 @@
     margin-right: auto;
     max-width: 60rem;
   }
-}
 
-body {
-  font-family: theme('fontFamily.default');
-  color: theme('textColor.zinc.100');
-}
-
-#root {
-  background-image: url('global/landing-bg.webp');
-  background-attachment: fixed;
-  min-height: 100vh;
-  background-position: center;
-  background-size: cover;
-}
-
-html {
-  @media only screen and (max-width: 900px) {
-    font-size: 95%;
+  body {
+    font-family: theme('fontFamily.default');
+    color: theme('textColor.zinc.100');
+    background-image: url('global/landing-bg.webp');
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
   }
 
-  @media only screen and (max-width: 600px) {
-    font-size: 90%;
+  html {
+    @media only screen and (max-width: 900px) {
+      font-size: 95%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 90%;
+    }
   }
-}
 
-* :disabled {
-  cursor: not-allowed;
-}
+  * :disabled {
+    cursor: not-allowed;
+  }
 
-/* ::selection {
-  color: inherit;
-  background: theme(colors.zinc.500);
+  /* ::selection {
+    color: inherit;
+    background: theme(colors.zinc.500);
+  }
+  
+  Code for Firefox ::-moz-selection {
+    color: inherit;
+    background: theme(colors.zinc.500);
+  } */
 }
-
-Code for Firefox ::-moz-selection {
-  color: inherit;
-  background: theme(colors.zinc.500);
-} */
