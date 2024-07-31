@@ -1,18 +1,20 @@
 import { useAnyTable } from '../../hooks/useAnyTable';
 import Button from '../../ui/Button';
+import NoDataFound from '../../ui/NoDataFound';
 import PostPreview from '../../ui/PostPreview';
 import Spinner from '../../ui/Spinner';
-import { maxWidthPage } from '../../utils/classNames';
 import { Post } from '../../utils/types';
 
 export default function RecentFromBlog({ padding }: { padding?: string }) {
-  const { data, isLoading } = useAnyTable({
+  const { data, isLoading }: { data: Post[] | undefined; isLoading: boolean } = useAnyTable({
     select: 'blog',
     from: 1,
     to: 3,
     orderColumn: 'id',
     orderAscendingDirection: true,
   });
+
+  if (!data) return <NoDataFound dataName='posts' />;
 
   return (
     <section className={`max-width-page ${padding} grid gap-10`}>

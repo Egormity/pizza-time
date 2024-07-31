@@ -29,9 +29,11 @@ export default function BlogSection() {
         )}
       </div>
 
-      <div>
-        <Pagination count={count} />
-      </div>
+      {count && (
+        <div>
+          <Pagination count={count} />
+        </div>
+      )}
     </section>
   );
 }

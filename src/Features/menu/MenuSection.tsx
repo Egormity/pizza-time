@@ -1,4 +1,3 @@
-import { maxWidthPage } from '../../utils/classNames';
 import MenuFiltering from './MenuFiltering';
 import MenuResults from './MenuResults';
 import MenuSearch from './MenuSearch';

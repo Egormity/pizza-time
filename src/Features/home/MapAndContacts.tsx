@@ -1,5 +1,4 @@
 import Map from '../../ui/Map';
-import { maxWidthPage } from '../../utils/classNames';
 
 const grayText = `font-light text-zinc-400`;
 

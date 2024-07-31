@@ -1,5 +1,4 @@
 import { useScreenSize } from '../../hooks/useScreenSize';
-import { maxWidthPage } from '../../utils/classNames';
 
 export default function PizzaTimeSection({ padding }: { padding?: string }) {
   const { screenWidth } = useScreenSize();

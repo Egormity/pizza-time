@@ -1,4 +1,3 @@
-import { maxWidthPage } from '../../utils/classNames';
 import Service from './Service';
 
 export default function HomeServices({ padding }: { padding?: string }) {

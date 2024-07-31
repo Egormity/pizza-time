@@ -26,6 +26,7 @@ export default function AccountPopup() {
   return createPortal(
     <div className='fixed-centered flex-centered padding-page-x z-50 h-screen w-screen backdrop-blur-sm backdrop-brightness-90'>
       <div
+        // @ts-expect-error DONT'T KNOW HOW TO DETERMINE ELEMENT TYPE INSIDE OF THIS HOOK
         ref={ref}
         className={`${screenHeight < 500 ? 'px-4 pb-6 pt-14' : 'px-8 pb-10 pt-20'} relative border border-zinc-300 bg-zinc-900 shadow-2xl shadow-zinc-800 max500px:w-full min500px:w-[30rem]`}
       >

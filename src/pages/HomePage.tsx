@@ -13,7 +13,7 @@ import BlogPost from '../ui/BlogPost';
 import MapAndContacts from '../Features/home/MapAndContacts';
 
 export default function HomePage() {
-  const [searchParams, getSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   return searchParams.get('post') ? (
     <BlogPost />

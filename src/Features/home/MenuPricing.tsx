@@ -1,15 +1,23 @@
 import { useNavigate } from 'react-router-dom';
+
 import { useAnyTable } from '../../hooks/useAnyTable';
 import PerspectiveHoverContainer from '../../ui/PerspectiveHoverContainer';
 import Spinner from '../../ui/Spinner';
-import { maxWidthPage } from '../../utils/classNames';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { MenuCategoryItem } from '../../utils/types';
 import { scrollToTop } from '../../utils/scrollToTop';
+import NoDataFound from '../../ui/NoDataFound';
 
 export default function MenuPricing({ padding }: { padding?: string }) {
-  const { data, isLoading } = useAnyTable({ select: 'pizzas', from: 1, to: 6, orderColumn: 'id' });
+  const { data, isLoading }: { data: MenuCategoryItem[] | undefined; isLoading: boolean } = useAnyTable({
+    select: 'pizzas',
+    from: 1,
+    to: 6,
+    orderColumn: 'id',
+  });
   const navigate = useNavigate();
+
+  if (!data) return <NoDataFound dataName='pizzas' />;
 
   return (
     <section className={`max-width-page ${padding} grid gap-8`}>

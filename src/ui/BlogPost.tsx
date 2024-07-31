@@ -1,5 +1,4 @@
 import { usePosts } from '../hooks/usePosts';
-import { maxWidthPage } from '../utils/classNames';
 import { formatDate } from '../utils/formatDate';
 import { scrollToTop } from '../utils/scrollToTop';
 import { Post } from '../utils/types';

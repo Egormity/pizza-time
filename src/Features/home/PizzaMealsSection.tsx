@@ -1,6 +1,5 @@
 import { pizzaMeals } from '../../data/dataToMap';
 import Button from '../../ui/Button';
-import { maxWidthPage } from '../../utils/classNames';
 import { formatCurrency } from '../../utils/formatCurrency';
 
 export default function PizzaMealsSection({ padding }: { padding?: string }) {

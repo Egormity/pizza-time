@@ -1,6 +1,5 @@
 import { PiPizzaLight } from 'react-icons/pi';
 
-import { maxWidthPage } from '../../utils/classNames';
 import Overlay from '../../ui/Overlay';
 
 export default function Stats({ margin }: { margin?: string }) {

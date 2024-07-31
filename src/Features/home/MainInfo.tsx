@@ -1,5 +1,3 @@
-import { maxWidthPageMedium } from '../../utils/classNames';
-
 export default function MainInfo({ padding }: { padding?: string }) {
   return (
     <section className={`max-width-medium ${padding} grid grid-cols-[4fr_3fr] gap-10 max500px:grid-cols-1`}>

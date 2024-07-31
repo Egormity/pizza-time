@@ -7,7 +7,7 @@ import Pagination from '../../ui/Pagination';
 import MenuItem from './MenuItem';
 
 export default function MenuResults() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const { menuItems, isLoadingMenu, menuCount } = useMenuSection(searchParams.get('menu') || 'pizzas');
 
   if (isLoadingMenu) return <Spinner />;
@@ -21,7 +21,7 @@ export default function MenuResults() {
         ))}
       </div>
 
-      <Pagination count={menuCount} />
+      {menuCount && <Pagination count={menuCount} />}
     </div>
   );
 }

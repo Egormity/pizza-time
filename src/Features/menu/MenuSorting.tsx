@@ -22,7 +22,7 @@ export default function MenuSorting() {
       <h3 className='mr-auto whitespace-nowrap text-xl font-bold'>Sort by:</h3>
 
       <div className='grid grid-cols-1 gap-4 min400px:grid-cols-2 min600px:grid-cols-4'>
-        {menuSorting.map((item, i) => (
+        {menuSorting.map(item => (
           <button
             key={item}
             onClick={() => handleClick(item)}

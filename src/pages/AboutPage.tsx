@@ -6,7 +6,6 @@ import AboutSection4 from '../Features/about/AboutSection4';
 import LongPizza from '../ui/Backgrounds/LongPizza';
 import FourImagesRow from '../ui/Backgrounds/FourImagesRow';
 import ThreeImagesRow from '../ui/Backgrounds/ThreeImagesRow';
-import { maxWidthPage } from '../utils/classNames';
 
 export default function AboutPage() {
   return (

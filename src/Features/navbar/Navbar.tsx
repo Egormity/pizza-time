@@ -33,7 +33,9 @@ export default function Navbar() {
           </>
         ) : (
           <ul
+            id='navbarUl'
             className={`${isMenuOpen ? 'translate-x-[1.25rem] translate-y-[-1.25rem] rounded-lg border border-zinc-800 p-[1.25rem] shadow-lg' : ''} absolute right-9 top-4 flex flex-col items-end space-y-8 bg-zinc-900`}
+            // @ts-expect-error DONT'T KNOW HOW TO DETERMINE ELEMENT TYPE INSIDE OF THIS HOOK
             ref={ref}
           >
             {!isMenuOpen ? (
