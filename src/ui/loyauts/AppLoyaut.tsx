@@ -1,7 +1,8 @@
 import { Outlet } from 'react-router-dom';
+
 import Navbar from '../../Features/navbar/Navbar';
-import Footer from '../../Features/footer/Footer';
 import LoginPopup from '../../Features/account/AccountPopup';
+import Footer from '../../Features/footer/Footer';
 
 export default function AppLoyaut() {
   return (
@@ -12,9 +13,9 @@ export default function AppLoyaut() {
         <Outlet />
       </main>
 
-      <LoginPopup />
-
       <Footer />
+
+      <LoginPopup />
     </div>
   );
 }

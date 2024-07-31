@@ -1,5 +1,4 @@
 import { ITEMS_PER_PAGE } from '../utils/constants';
-import { Post } from '../utils/types';
 import { supabase } from './supabase';
 
 type Filter = {
@@ -21,7 +20,7 @@ export async function getPosts({ filterField, filterValue, page }: Filter) {
     query = query.range(from, to);
   }
 
-  const { data, error, count }: { data: Post[]; error: string; count: number } = await query;
+  const { data, error, count } = await query;
 
   if (error) {
     console.log('!!! ERRRRRROR !!!', error);

@@ -29,7 +29,7 @@ export default function LogIn({ setActiveMenu }: LogInProps) {
       if (!localData) break;
 
       const user: UserType = JSON.parse(localData);
-
+      if (!user) break;
       if (!user.fullName) continue;
 
       if (data.logInEmail === user.email && data.logInPassword === user.password) {

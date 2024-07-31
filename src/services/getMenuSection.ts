@@ -1,5 +1,5 @@
 import { ITEMS_PER_PAGE } from '../utils/constants';
-import { MenuCategoryItem, MenuFiltersTypes, MenuSortingTypes } from '../utils/types';
+import { MenuFiltersTypes, MenuSortingTypes } from '../utils/types';
 import { supabase } from './supabase';
 
 type getMenuSectionProps = {
@@ -28,7 +28,7 @@ export async function getMenuSection({ select, page, sortBy }: getMenuSectionPro
     query = query.range(from, to);
   }
 
-  const { data, error, count }: { data: MenuCategoryItem[]; error: string; count: number } = await query;
+  const { data, error, count } = await query;
 
   if (error) {
     console.log('!!! ERRRRRROR !!!', error);

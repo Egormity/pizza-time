@@ -5,11 +5,12 @@ import { ITEMS_PER_PAGE } from '../utils/constants';
 import { getMenuSection } from '../services/getMenuSection';
 
 export function useMenuSection(select: string) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const queryClient = useQueryClient();
 
   //--- PAGINATION ---//
-  const page = +searchParams.get('page') || 1;
+  const pageParams = searchParams.get('page');
+  const page = pageParams ? +pageParams : 1;
 
   //--- SORTING ---//
   const sortBy = searchParams.get('sortBy') || 'default';
@@ -24,19 +25,20 @@ export function useMenuSection(select: string) {
   });
 
   //--- PREFETCHING ---//
-  const pageCount = Math.ceil(menuCount / ITEMS_PER_PAGE);
+  if (menuCount) {
+    const pageCount = Math.ceil(menuCount / ITEMS_PER_PAGE);
 
-  if (page < pageCount)
-    queryClient.prefetchQuery({
-      queryKey: [select, page + 1],
-      queryFn: () => getMenuSection({ select, page: page + 1, sortBy }),
-    });
+    if (page < pageCount)
+      queryClient.prefetchQuery({
+        queryKey: [select, page + 1],
+        queryFn: () => getMenuSection({ select, page: page + 1, sortBy }),
+      });
 
-  if (page > 1)
-    queryClient.prefetchQuery({
-      queryKey: [select, page - 1],
-      queryFn: () => getMenuSection({ select, page: page - 1, sortBy }),
-    });
-
+    if (page > 1)
+      queryClient.prefetchQuery({
+        queryKey: [select, page - 1],
+        queryFn: () => getMenuSection({ select, page: page - 1, sortBy }),
+      });
+  }
   return { menuItems, error, isLoadingMenu, menuCount };
 }
