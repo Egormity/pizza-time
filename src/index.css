@@ -166,7 +166,7 @@
   body {
     font-family: theme('fontFamily.default');
     color: theme('textColor.zinc.100');
-    background-image: url('global/landing-bg.webp');
+    background-image: url('/global/landing-bg.webp');
     background-attachment: fixed;
     min-height: 100vh;
     background-position: center;
