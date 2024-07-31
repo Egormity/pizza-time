@@ -16,14 +16,9 @@ export default function MenuResults() {
     return <NoDataFound dataName={searchParams.get('search') || searchParams.get('menu') || 'pizzas'} />;
   }
 
-  function determineGridClos() {
-    if (menuCount === 1) return 'grid-cols-3';
-    return 'grid-cols-[repeat(auto-fit,minmax(17.5rem,1fr))]';
-  }
-
   return (
     <div>
-      <div className={`${determineGridClos()} mb-8 grid gap-8 max400px:grid-cols-1 min1800px:grid-cols-3`}>
+      <div className={`mb-8 grid grid-cols-1 gap-8 min600px:grid-cols-2 min1400px:grid-cols-3`}>
         {menuItems.map(menuItem => (
           <MenuItem menuItem={menuItem} key={menuItem.name} />
         ))}

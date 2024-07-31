@@ -1,9 +1,11 @@
+import toast from 'react-hot-toast';
 import { useCartContext } from '../../contexts/CartContext';
 import { useUserContext } from '../../contexts/UserContext';
 import Button from '../../ui/Button';
 import { formatCurrency } from '../../utils/formatCurrency';
 import { scrollToTop } from '../../utils/scrollToTop';
 import CartItem from './CartItem';
+import { resolveAfter } from '../../utils/resolveAfter';
 
 export default function SectionCart() {
   const { cart, handleClearCart, cartTotalPrice, cartQuantity } = useCartContext();
@@ -13,9 +15,7 @@ export default function SectionCart() {
     return (
       <div className={`max-width-page grid justify-items-center gap-10 text-center text-lg`}>
         <h1 className='text-5xl font-black'>Shopping cart</h1>
-        <h1 className='text-3xl font-bold text-primary-yellow-light'>
-          Please, log in or create an account to continue
-        </h1>
+        <h1 className='text-3xl font-bold'>Please, log in or create an account to continue</h1>
         <Button
           variation='red'
           to={user ? '/UserSettingsPage' : null}
@@ -67,7 +67,18 @@ export default function SectionCart() {
           </div>
 
           <div className='grid grid-cols-2 gap-4 max500px:grid-cols-1'>
-            <Button variation='red'>Checkout</Button>
+            <Button
+              variation='red'
+              customFunc={() =>
+                toast.promise(resolveAfter('asd', 3000, true), {
+                  loading: 'Loading..',
+                  success: 'No success',
+                  error: 'This feature will be implemented one day..',
+                })
+              }
+            >
+              Checkout
+            </Button>
             <Button variation='red-transparent' to={'/MenuPage'}>
               Back to menu
             </Button>

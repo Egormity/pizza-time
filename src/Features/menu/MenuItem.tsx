@@ -70,7 +70,7 @@ export default function MenuItem({ menuItem }: MenuItemProps) {
                 customFunc={() =>
                   user
                     ? handleAddNewItemToCart(menuItem, pizzaSize)
-                    : toast.error('You need to bo logged to proceed')
+                    : toast.error('You need to be logged to proceed')
                 }
               >
                 Add to cart

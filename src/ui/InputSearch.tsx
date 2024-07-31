@@ -3,15 +3,24 @@ import { useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import { borderDarkWithRing } from '../utils/classNames';
+import { useDebounce } from '../hooks/useDebounce';
 
 export default function InputSearch({ width }: { width?: string }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState('');
+  const newSearch = useDebounce(search, 200);
 
   useEffect(() => {
-    searchParams.set('search', search);
-    setSearchParams(searchParams);
-  }, [search, searchParams, setSearchParams]);
+    if (newSearch) {
+      searchParams.set('search', newSearch);
+      setSearchParams(searchParams);
+    } else {
+      if (searchParams.get('search')) {
+        searchParams.set('search', '');
+        setSearchParams(searchParams);
+      }
+    }
+  }, [newSearch, searchParams, setSearchParams]);
 
   return (
     <div className={`${width} relative`}>
