@@ -34,7 +34,7 @@ export default function SectionCart() {
 
       {cart.content.length === 0 ? (
         <div className='grid justify-items-center gap-8'>
-          <h2 className='text-3xl font-semibold'>Your cart is empty..</h2>
+          <h2 className='text-3xl font-semibold text-primary-yellow-light'>Your cart is empty..</h2>
           <Button to='/MenuPage' variation='red'>
             Explore our delicious food
           </Button>
