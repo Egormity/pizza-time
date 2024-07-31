@@ -59,7 +59,6 @@ function CartContextProvider({ children }: { children: ReactNode }) {
       pizzaSize: pizzaSize || null,
     };
 
-    console.log(cart);
     setCart((cart: CartType) => {
       return {
         id: cart.id,

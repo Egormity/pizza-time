@@ -44,7 +44,7 @@ export default function NavButtons({ customFunc }: { customFunc: () => void }) {
             <IoCartOutline />
           </span>
           <span>Cart</span>
-          <span className={`${calculateQuantityWidth(cartQuantity)}`}>({cartQuantity})</span>
+          <span className={`${calculateQuantityWidth(cartQuantity)}`}>({user ? cartQuantity : 0})</span>
         </Button>
       </li>
     </>

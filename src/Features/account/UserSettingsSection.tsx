@@ -6,6 +6,7 @@ import InputUseForm from '../../ui/InputUseForm';
 import Button from '../../ui/Button';
 import { UserType } from '../../utils/types';
 import { getNewUserIndex } from '../../utils/getNewUserIndex';
+import { useCartContext } from '../../contexts/CartContext';
 
 export type NewUserType = {
   settingsName: string;
