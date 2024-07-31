@@ -8,7 +8,7 @@ export default function BlogSection() {
   const { posts, count, isLoadingPosts } = usePosts();
 
   return (
-    <section>
+    <section className='padding-page-t max-width-page text-center'>
       <h1 className='text-6xl font-black'>Blog</h1>
       <p className='pt-4 text-lg text-zinc-300'>
         Pizza makes everything better. These are some of our favorite pizza blogs that are loaded with recipes

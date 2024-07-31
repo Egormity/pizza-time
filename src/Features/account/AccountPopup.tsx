@@ -43,7 +43,7 @@ export default function AccountPopup() {
 
         <button
           onClick={() => localStorage.clear()}
-          className={`${screenHeight < 500 ? 'left-1 top-1' : 'left-4 top-4'} absolute text-sm text-zinc-300 underline underline-offset-2 duration-primary hover:text-primary-red`}
+          className={`${screenHeight < 500 ? 'left-4 top-4' : 'left-8 top-8'} absolute text-sm text-zinc-300 underline underline-offset-2 duration-primary hover:text-primary-red max400px:text-xs`}
         >
           Clear localStorage (for developers)
         </button>

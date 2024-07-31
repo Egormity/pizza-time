@@ -30,13 +30,13 @@ export function useMenuSection(select: string) {
 
     if (page < pageCount)
       queryClient.prefetchQuery({
-        queryKey: [select, page + 1],
+        queryKey: [select, page + 1, sortBy],
         queryFn: () => getMenuSection({ select, page: page + 1, sortBy }),
       });
 
     if (page > 1)
       queryClient.prefetchQuery({
-        queryKey: [select, page - 1],
+        queryKey: [select, page - 1, sortBy],
         queryFn: () => getMenuSection({ select, page: page - 1, sortBy }),
       });
   }

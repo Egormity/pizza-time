@@ -11,7 +11,7 @@ export default function MenuResults() {
   const { menuItems, isLoadingMenu, menuCount } = useMenuSection(searchParams.get('menu') || 'pizzas');
 
   if (isLoadingMenu) return <Spinner />;
-  if (!menuItems) return <NoDataFound dataName={searchParams.get('menu') || 'menu'} />;
+  if (!menuItems) return <NoDataFound dataName={searchParams.get('menu') || 'pizzas'} />;
 
   return (
     <div>
