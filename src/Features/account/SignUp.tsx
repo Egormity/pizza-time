@@ -91,7 +91,7 @@ export default function SignUp({ setActiveMenu }: SignUpProps) {
 
       <div className='col-span-full grid grid-cols-2 gap-4 max400px:grid-cols-1'>
         <div className='col-span-full grid'>
-          <Button variation='red-transparent' customFunc={() => setActiveMenu('logIn')}>
+          <Button variation='red-transparent' htmlType='button' customFunc={() => setActiveMenu('logIn')}>
             Already has an account?
           </Button>
         </div>
