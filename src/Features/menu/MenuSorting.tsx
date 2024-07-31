@@ -1,11 +1,20 @@
 import { useSearchParams } from 'react-router-dom';
 import { menuSorting } from '../../data/dataToMap';
 import { borderDarkWithRing } from '../../utils/classNames';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function MenuSorting() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeSorting, setActiveSorting] = useState(searchParams.get('sortBy') || menuSorting[0]);
+
+  const activeMenu = searchParams.get('menu');
+
+  useEffect(() => {
+    setActiveSorting(menuSorting[0]);
+
+    searchParams.set('sortBy', menuSorting[0]);
+    setSearchParams(searchParams);
+  }, [activeMenu]);
 
   function handleClick(param: string) {
     searchParams.set('page', '1');
