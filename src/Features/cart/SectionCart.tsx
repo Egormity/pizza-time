@@ -15,7 +15,9 @@ export default function SectionCart() {
     return (
       <div className={`max-width-page grid justify-items-center gap-10 text-center text-lg`}>
         <h1 className='text-5xl font-black'>Shopping cart</h1>
-        <h1 className='text-3xl font-bold'>Please, log in or create an account to continue</h1>
+        <h1 className='text-3xl font-bold text-primary-yellow-light'>
+          Please, log in or create an account to continue
+        </h1>
         <Button
           variation='red'
           to={user ? '/UserSettingsPage' : null}
