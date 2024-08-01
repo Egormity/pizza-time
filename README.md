@@ -37,9 +37,10 @@ Pizza-Time:
    └───utils
 ```
 
+
 ### In this project such technologies and libraries were used:
 
-- TypescriptReact - as main idea of this work
+- [TypescriptReact](https://img.shields.io/badge/TypescriptReact-8A2BE2) - as main idea of this work
 - Vite - for local devolopment server and compilor
 - Supabase - for "backend"
 - React Query - for recieving and manipulating with data from backend
@@ -74,6 +75,7 @@ Pizza Time brings together delicious food and advanced technology, creating a us
   <img alt="Static Badge" src="https://img.shields.io/badge/Catherine_Isonline_git-8A2BE2">
 </a>
 
+###
 ###
 ###
 
