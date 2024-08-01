@@ -40,7 +40,7 @@ Pizza-Time:
 
 ### In this project such technologies and libraries were used:
 
-
+<img alt="Static Badge" src="https://img.shields.io/badge/Catherine_Isonline_git-8A2BE2">
 <img src=" https://img.shields.io/badge/ReactTypescript_-_as_main_idea_of_this_work-blue"/>
 
 - <img src=" https://img.shields.io/badge/Vite_-_for_local devolopment_server_and_compilor-blue"/>
