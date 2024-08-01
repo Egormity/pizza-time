@@ -53,9 +53,9 @@ Pizza-Time:
 - **ReactTypescript** - as main idea of this work
 - **Vite** - for local devolopment server and compilor
 - **Supabase** - for "backend"
-- **React Query** - for recieving and manipulating with data from backend
+- **React Query** - for handling data from backend
 - **React Router** - for handling page routing
-- **React Hook Form** - for handling form
+- **React Hook Form** - for handling forms
 - **React Icons** - for awesome icons
 - **React Hot Toast** - for pretty and easy to use toasts
 - **Tailwind** - for styling
