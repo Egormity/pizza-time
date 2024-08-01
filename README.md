@@ -40,7 +40,7 @@ Pizza-Time:
 
 ### In this project such technologies and libraries were used:
 
-<div style="flex; align-items: center">
+<div style="flex, align-items: center">
    <img alt="Static Badge" src="https://img.shields.io/badge/TypescriptReact-8A2BE2"> hi
 </div>
 
