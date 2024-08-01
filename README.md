@@ -42,18 +42,24 @@ Pizza-Time:
 
 - <img alt="Static Badge" src="https://img.shields.io/badge/ReactTypescript-as_main_idea_of_this_work-8A2BE2">
 - <img alt="Static Badge" src="https://img.shields.io/badge/Vite-for_local_devolopment_server_and_compilor-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/Supabase-for_'backend'-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Query-for_recieving_and_manipulating_with_data_from_backend-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Router-for_handling_page_routing-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Hook_Form-for_handling_form-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Icons-for_awesome_icons-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Hot_Toast-for_pretty_and_easy_to_use_toasts-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Tailwind-for_styling-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Local_Storage-for_storing_fake_cart_and_user_registration-8A2BE2">
 
-- ReactTypescript - as main idea of this work
+<!-- - ReactTypescript - as main idea of this work
 - Vite - for local devolopment server and compilor
 - Supabase - for "backend"
 - React Query - for recieving and manipulating with data from backend
 - React Router - for handling page routing
-- React Hook Form - for handling forms
+- React Hook Form - for handling form
 - React Icons - for awesome icons
 - React Hot Toast - for pretty and easy to use toasts
 - Tailwind - for styling
-- Local Storage - for storing fake cart and user registration
+- Local Storage - for storing fake cart and user registration -->
 
 ---
 
