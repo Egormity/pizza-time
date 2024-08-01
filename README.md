@@ -42,7 +42,9 @@ Pizza-Time:
 
 
 
-![Static Badge](https://img.shields.io/badge/:badgeContent)
+- <img src=" https://img.shields.io/badge/ReactTypescript_-_as_main idea_of_this_work-blue"/>
+- <img src=" https://img.shields.io/badge/Vite - for local devolopment server and compilor-blue"/>
+- <img src=" https://img.shields.io/badge/Supabase_-_for_'backend'-blue"/>
 
 
 - ReactTypescript - as main idea of this work
