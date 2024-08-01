@@ -74,7 +74,7 @@ Pizza Time brings together delicious food and advanced technology, creating a us
   <img alt="Static Badge" src="https://img.shields.io/badge/Catherine_Isonline_git-8A2BE2">
 </a>
 
-###
+___
 
 # React + TypeScript + Vite
 
