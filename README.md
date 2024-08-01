@@ -40,15 +40,15 @@ Pizza-Time:
 
 ### In this project such technologies and libraries were used:
 
-- <img alt="Static Badge" src="https://img.shields.io/badge/ReactTypescript-as_main_idea_of_this_work-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/Vite-for_local_devolopment_server_and_compilor-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Query-for_recieving_and_manipulating_with_data_from_backend-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Router-for_handling_page_routing-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Hook_Form-for_handling_form-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Icons-for_awesome_icons-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Hot_Toast-for_pretty_and_easy_to_use_toasts-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/Tailwind-for_styling-8A2BE2">
-- <img alt="Static Badge" src="https://img.shields.io/badge/Local_Storage-for_storing_fake_cart_and_user_registration-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/ReactTypescript-as_main_idea_of_this_work-darkgray">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Vite-for_local_devolopment_server_and_compilor-darkgray">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Query-for_recieving_and_manipulating_with_data_from_backend-darkgray">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Router-for_handling_page_routing-darkgray">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Hook_Form-for_handling_form-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Icons-for_awesome_icons-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Hot_Toast-for_pretty_and_easy_to_use_toasts-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Tailwind-for_styling-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Local_Storage-for_storing_fake_cart_and_user_registration-blue">
 
 <!-- - ReactTypescript - as main idea of this work
 - Vite - for local devolopment server and compilor
