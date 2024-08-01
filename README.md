@@ -39,8 +39,8 @@ Pizza-Time:
 
 
 ### In this project such technologies and libraries were used:
-<img alt="Static Badge" src="https://img.shields.io/badge/TypescriptReact-8A2BE2">
-- [TypescriptReact](https://img.shields.io/badge/TypescriptReact-8A2BE2) - as main idea of this work
+
+- <img alt="Static Badge" src="https://img.shields.io/badge/TypescriptReact-8A2BE2"> - as main idea of this work
 - Vite - for local devolopment server and compilor
 - Supabase - for "backend"
 - React Query - for recieving and manipulating with data from backend
