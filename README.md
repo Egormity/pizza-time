@@ -40,10 +40,10 @@ Pizza-Time:
 
 ### In this project such technologies and libraries were used:
 
-- <img alt="Static Badge" src="https://img.shields.io/badge/ReactTypescript-as_main_idea_of_this_work-darkgray">
-- <img alt="Static Badge" src="https://img.shields.io/badge/Vite-for_local_devolopment_server_and_compilor-darkgray">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Query-for_recieving_and_manipulating_with_data_from_backend-darkgray">
-- <img alt="Static Badge" src="https://img.shields.io/badge/React_Router-for_handling_page_routing-darkgray">
+- <img alt="Static Badge" src="https://img.shields.io/badge/ReactTypescript-as_main_idea_of_this_work-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Vite-for_local_devolopment_server_and_compilor-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Query-for_recieving_and_manipulating_with_data_from_backend-blue">
+- <img alt="Static Badge" src="https://img.shields.io/badge/React_Router-for_handling_page_routing-blue">
 - <img alt="Static Badge" src="https://img.shields.io/badge/React_Hook_Form-for_handling_form-blue">
 - <img alt="Static Badge" src="https://img.shields.io/badge/React_Icons-for_awesome_icons-blue">
 - <img alt="Static Badge" src="https://img.shields.io/badge/React_Hot_Toast-for_pretty_and_easy_to_use_toasts-blue">
