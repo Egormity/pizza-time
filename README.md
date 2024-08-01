@@ -40,12 +40,9 @@ Pizza-Time:
 
 ### In this project such technologies and libraries were used:
 
-<img alt="Static Badge" src="https://img.shields.io/badge/Catherine_Isonline-git-8A2BE2">
-<img src=" https://img.shields.io/badge/ReactTypescript_-_as_main_idea_of_this_work-blue"/>
-
-- <img src=" https://img.shields.io/badge/Vite_-_for_local devolopment_server_and_compilor-blue"/>
-- <img src=" https://img.shields.io/badge/Supabase_-_for_backend-blue"/>
-
+- <img alt="Static Badge" src="https://img.shields.io/badge/ReactTypescript-as_main_idea_of_this_work-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Vite-for_local_devolopment_server_and_compilor-8A2BE2">
+- <img alt="Static Badge" src="https://img.shields.io/badge/Supabase-for_'backend'-8A2BE2">
 
 - ReactTypescript - as main idea of this work
 - Vite - for local devolopment server and compilor
@@ -79,7 +76,7 @@ Pizza Time brings together delicious food and advanced technology, creating a us
 ### _I was inspired by the work of:_
 
 <a target="_blanc" href="https://github.com/catherineisonline/pizza-time-with-react">
-  <img alt="Static Badge" src="https://img.shields.io/badge/Catherine_Isonline_git-8A2BE2">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Catherine_Isonline-git-8A2BE2">
 </a>
 
 ###
