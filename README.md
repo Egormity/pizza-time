@@ -41,7 +41,8 @@ Pizza-Time:
 ### In this project such technologies and libraries were used:
 
 
-[test](https://img.shields.io/badge/TypescriptReact-8A2BE2)
+
+![Static Badge](https://img.shields.io/badge/:badgeContent)
 
 
 - ReactTypescript - as main idea of this work
