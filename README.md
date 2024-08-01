@@ -41,8 +41,8 @@ Pizza-Time:
 ### In this project such technologies and libraries were used:
 
 
+<img src=" https://img.shields.io/badge/ReactTypescript_-_as_main_idea_of_this_work-blue"/>
 
-- <img src=" https://img.shields.io/badge/ReactTypescript_-_as_main_idea_of_this_work-blue"/>
 - <img src=" https://img.shields.io/badge/Vite_-_for_local devolopment_server_and_compilor-blue"/>
 - <img src=" https://img.shields.io/badge/Supabase_-_for_backend-blue"/>
 
