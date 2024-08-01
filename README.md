@@ -50,16 +50,16 @@ Pizza-Time:
 - <img alt="Static Badge" src="https://img.shields.io/badge/Tailwind-for_styling-blue">
 - <img alt="Static Badge" src="https://img.shields.io/badge/Local_Storage-for_storing_fake_cart_and_user_registration-blue">
 
-<!-- - ReactTypescript - as main idea of this work
-- Vite - for local devolopment server and compilor
-- Supabase - for "backend"
-- React Query - for recieving and manipulating with data from backend
-- React Router - for handling page routing
-- React Hook Form - for handling form
-- React Icons - for awesome icons
-- React Hot Toast - for pretty and easy to use toasts
-- Tailwind - for styling
-- Local Storage - for storing fake cart and user registration -->
+- **ReactTypescript** - as main idea of this work
+- **Vite** - for local devolopment server and compilor
+- **Supabase** - for "backend"
+- **React Query** - for recieving and manipulating with data from backend
+- **React Router** - for handling page routing
+- **React Hook Form** - for handling form
+- **React Icons** - for awesome icons
+- **React Hot Toast** - for pretty and easy to use toasts
+- **Tailwind** - for styling
+- **Local Storage** - for storing fake cart and user registration
 
 ---
 
