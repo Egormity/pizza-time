@@ -96,7 +96,7 @@ function CartContextProvider({ children }: { children: ReactNode }) {
   function handleRemoveItemFromCart(removeItem: CartItem) {
     setCart((cart: CartType) => {
       removeItem.quantity -= 1;
-      removeItem.totalPrice -= removeItem.price;
+      removeItem.totalPrice -= removeItem.pizzaPrice || removeItem.price;
       removeItem.totalDiscount -= removeItem.discount;
       if (removeItem.quantity <= 0)
         return { id: cart.id, content: cart.content.filter(item => item.name !== removeItem.name) };
