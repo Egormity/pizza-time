@@ -1,7 +1,7 @@
-import AboutSection1 from '../Features/about/AboutSection1';
-import AboutSection2 from '../Features/about/AboutSection2';
-import AboutSection3 from '../Features/about/AboutSection3';
-import AboutSection4 from '../Features/about/AboutSection4';
+import AboutSection1 from '../features/about/AboutSection1Food';
+import AboutSection2 from '../features/about/AboutSection2Together';
+import AboutSection3 from '../features/about/AboutSection3Feedback';
+import AboutSection4 from '../features/about/AboutSection4Join';
 
 import LongPizza from '../ui/Backgrounds/LongPizza';
 import FourImagesRow from '../ui/Backgrounds/FourImagesRow';

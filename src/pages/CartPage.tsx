@@ -1,4 +1,4 @@
-import SectionCart from '../Features/cart/SectionCart';
+import SectionCart from '../features/cart/SectionCart';
 
 export default function CartPage() {
   return (

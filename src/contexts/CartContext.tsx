@@ -20,6 +20,9 @@ type CartContextProps = null | {
 
 const CartContext = createContext<CartContextProps>(null);
 
+//---  ---//
+//--- I KNOW THAT THIS IS NOT THE PROPER WAY TO HANDLE CART. BUT IT IS THR WAY IT IS ---//
+//---  ---//
 function CartContextProvider({ children }: { children: ReactNode }) {
   const { user } = useUserContext();
 

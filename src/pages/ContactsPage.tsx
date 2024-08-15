@@ -1,5 +1,5 @@
-import ContactsForm from '../Features/contacts/ContactsForm';
-import ContactUs from '../Features/contacts/ContactUs';
+import ContactsForm from '../features/contacts/ContactsForm';
+import ContactUs from '../features/contacts/ContactUs';
 
 export default function ContactsPage() {
   return (

@@ -1,4 +1,4 @@
-import UserSettingsSection from '../Features/account/UserSettingsSection';
+import UserSettingsSection from '../features/account/UserSettingsSection';
 
 export default function UserSettingsPage() {
   return (

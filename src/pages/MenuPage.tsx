@@ -1,4 +1,4 @@
-import MenuSection from '../Features/menu/MenuSection';
+import MenuSection from '../features/menu/MenuSection';
 
 export default function MenuPage() {
   return (

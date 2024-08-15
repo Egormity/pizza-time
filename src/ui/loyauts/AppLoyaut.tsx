@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 
-import Navbar from '../../Features/navbar/Navbar';
-import LoginPopup from '../../Features/account/AccountPopup';
-import Footer from '../../Features/footer/Footer';
+import Navbar from '../../features/navbar/Navbar';
+import LoginPopup from '../../features/account/AccountPopup';
+import Footer from '../../features/footer/Footer';
 
 export default function AppLoyaut() {
   return (

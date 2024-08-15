@@ -1,4 +1,4 @@
-import RefundsSection from '../Features/refunds/RefundsSection';
+import RefundsSection from '../features/refunds/RefundsSection';
 
 export default function RefundsPage() {
   return <RefundsSection />;
