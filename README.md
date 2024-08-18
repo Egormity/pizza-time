@@ -2,7 +2,7 @@
 
 > #### _THE Real world React project_
 
-<img src="https://github.com/Egormity/pizza-time/blob/master/assets/Preview-main.png?raw=true"/>
+<img src="https://github.com/Egormity/pizza-time/blob/master/assets(references)/Preview-main.png?raw=true"/>
 
 **Pizza Time** &ndash; Delicious online experience. I developed e-commerce platform for this pizza restaurant (based on another creators's site), featuring an interactive menu with a variety of options including pizza, sushi, and pasta. Simplifying the online ordering process and providing a seamless user experience was the key goal of this project.
 
